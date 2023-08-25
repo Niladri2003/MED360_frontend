@@ -31,8 +31,11 @@ export default function UpdatePassword() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(submitPasswordForm)}>
-        <div className="my-10 flex flex-col gap-y-6 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
+      <form
+        onSubmit={handleSubmit(submitPasswordForm)}
+        className="rounded-b-md border-[1px] border-white p-4"
+      >
+        <div className="my-10 flex flex-col gap-y-6 rounded-md  p-8 px-12">
           <h2 className="text-lg font-semibold text-richblack-5">Password</h2>
           <div className="flex flex-col gap-5 lg:flex-row">
             <div className="relative flex flex-col gap-2 lg:w-[48%]">
@@ -44,7 +47,8 @@ export default function UpdatePassword() {
                 name="oldPassword"
                 id="oldPassword"
                 placeholder="Enter Current Password"
-                className="form-style"
+                className="form-style border-b-4 "
+                style={{ backgroundColor: "#b4e7ed", color: "black" }}
                 {...register("oldPassword", { required: true })}
               />
               <span
@@ -72,7 +76,8 @@ export default function UpdatePassword() {
                 name="newPassword"
                 id="newPassword"
                 placeholder="Enter New Password"
-                className="form-style"
+                className="form-style border-b-4 "
+                style={{ backgroundColor: "#b4e7ed", color: "black" }}
                 {...register("newPassword", { required: true })}
               />
               <span
@@ -98,11 +103,16 @@ export default function UpdatePassword() {
             onClick={() => {
               navigate("/dashboard/my-profile")
             }}
-            className="cursor-pointer rounded-md bg-richblack-700 py-2 px-5 font-semibold text-richblack-50"
+            className="cursor-pointer rounded-md  border-[1px] px-5 py-2 font-semibold text-white"
           >
             Cancel
           </button>
-          <IconBtn type="submit" text="Update" />
+          <IconBtn
+            type="submit"
+            text="Update"
+            outline={true}
+            textcolor={"text-white"}
+          />
         </div>
       </form>
     </>

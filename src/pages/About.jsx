@@ -1,9 +1,9 @@
 import React from "react"
 
-import FoundingStory from "../assets/Images/FoundingStory.png"
-import BannerImage1 from "../assets/Images/aboutus1.webp"
-import BannerImage2 from "../assets/Images/aboutus2.webp"
-import BannerImage3 from "../assets/Images/aboutus3.webp"
+import BannerImage1 from "../assets/Images/About_1.jpg"
+import BannerImage2 from "../assets/Images/About_2.jpg"
+import BannerImage3 from "../assets/Images/About_3.jpg"
+import OurMission from "../assets/Images/Mission_img.jpg"
 import Footer from "../components/Common/Footer"
 import ReviewSlider from "../components/Common/ReviewSlider"
 import ContactFormSection from "../components/core/AboutPage/ContactFormSection"
@@ -15,87 +15,117 @@ import HighlightText from "../components/core/HomePage/HighlightText"
 const About = () => {
   return (
     <div>
-      <section className="bg-richblack-700">
+      <section className="bg-[#0e3239ce]">
         <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-center text-white">
-          <header className="mx-auto py-20 text-4xl font-semibold lg:w-[70%]">
-            Driving Innovation in Online Education for a
+          <header className="mx-auto py-20 text-3xl font-semibold lg:w-[70%]">
+            Discover Our Health Revolution: Redefining Care and Convenience
             <HighlightText text={"Brighter Future"} />
-            <p className="mx-auto mt-3 text-center text-base font-medium text-richblack-300 lg:w-[95%]">
-              Studynotion is at the forefront of driving innovation in online
-              education. We're passionate about creating a brighter future by
-              offering cutting-edge courses, leveraging emerging technologies,
-              and nurturing a vibrant learning community.
+            <p className="mx-auto mt-3 text-center text-lg font-medium text-richblack-300 lg:w-[95%]">
+              Welcome to MED360, your trusted online platform for convenient and
+              efficient healthcare services. At MED360, we're dedicated to
+              revolutionizing the way you access medical care, making it simpler
+              and more accessible than ever before.
             </p>
           </header>
           <div className="sm:h-[70px] lg:h-[150px]"></div>
-          <div className="absolute bottom-0 left-[50%] grid w-[100%] translate-x-[-50%] translate-y-[30%] grid-cols-3 gap-3 lg:gap-5">
-            <img src={BannerImage1} alt="" />
-            <img src={BannerImage2} alt="" />
-            <img src={BannerImage3} alt="" />
+          <div className="absolute bottom-0 left-[50%] grid w-[100%] translate-x-[-50%] translate-y-[40%] grid-cols-3 gap-3 lg:gap-5">
+            <img
+              src={BannerImage1}
+              alt=""
+              className="h-[311px] w-[380px] rounded-lg object-cover"
+            />
+            <img src={BannerImage2} alt="" className="rounded-lg" />
+            <img src={BannerImage3} alt="" className="h-[311px] rounded-lg" />
           </div>
         </div>
       </section>
 
-      <section className="border-b border-richblack-700">
+      {/* <section className="border-b border-richblack-700">
         <div className="mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-richblack-500">
           <div className="h-[100px] "></div>
           <Quote />
         </div>
-      </section>
+      </section> */}
+      <div className="h-[100px]"></div>
 
       <section>
-        <div className="mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-richblack-500">
-          <div className="flex flex-col items-center gap-10 lg:flex-row justify-between">
-            <div className="my-24 flex lg:w-[50%] flex-col gap-10">
-              <h1 className="bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCB045] bg-clip-text text-4xl font-semibold text-transparent lg:w-[70%] ">
-                Our Founding Story
+        <div className="mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-2 text-richblack-500">
+          <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
+            <div className="my-24 flex flex-col gap-10 lg:w-[50%]">
+              <h1 className="bg-clip-text text-4xl font-semibold text-transparent text-white lg:w-[70%] ">
+                Our Mission
               </h1>
-              <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                Our e-learning platform was born out of a shared vision and
-                passion for transforming education. It all began with a group of
-                educators, technologists, and lifelong learners who recognized
-                the need for accessible, flexible, and high-quality learning
-                opportunities in a rapidly evolving digital world.
+              <p className="text-base font-medium text-[#beb6b6] lg:w-[95%]">
+                Our mission is to bridge the gap between patients and healthcare
+                professionals, ensuring that quality medical assistance is just
+                a few clicks away. We understand the importance of timely
+                medical attention, and we're committed to providing a seamless
+                experience that prioritizes your health and well-being.
               </p>
-              <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                As experienced educators ourselves, we witnessed firsthand the
-                limitations and challenges of traditional education systems. We
-                believed that education should not be confined to the walls of a
-                classroom or restricted by geographical boundaries. We
-                envisioned a platform that could bridge these gaps and empower
-                individuals from all walks of life to unlock their full
-                potential.
+              <p className="text-base font-medium text-[#beb6b6] lg:w-[95%]">
+                With our intuitive search functionality, you can easily discover
+                experienced and highly qualified doctors specializing in various
+                medical fields. Whether you're seeking a specialist for a
+                specific condition or a general practitioner, we have a diverse
+                range of healthcare professionals to choose from.
               </p>
             </div>
 
             <div>
               <img
-                src={FoundingStory}
+                src={OurMission}
                 alt=""
-                className="shadow-[0_0_20px_0] shadow-[#FC6767]"
+                className="h-80 shadow-[0_0_20px_0] shadow-white"
               />
             </div>
           </div>
-          <div className="flex flex-col items-center lg:gap-10 lg:flex-row justify-between">
-            <div className="my-24 flex lg:w-[40%] flex-col gap-10">
-              <h1 className="bg-gradient-to-b from-[#FF512F] to-[#F09819] bg-clip-text text-4xl font-semibold text-transparent lg:w-[70%] ">
-                Our Vision
+          <div className="flex flex-col items-center justify-between lg:flex-row lg:gap-10">
+            <div className="my-24 flex flex-col gap-10 lg:w-[40%]">
+              <h1 className="bg-clip-text text-4xl font-semibold text-transparent text-white lg:w-[70%] ">
+                Find the Right Doctor
               </h1>
-              <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                With this vision in mind, we set out on a journey to create an
-                e-learning platform that would revolutionize the way people
-                learn. Our team of dedicated experts worked tirelessly to
-                develop a robust and intuitive platform that combines
-                cutting-edge technology with engaging content, fostering a
-                dynamic and interactive learning experience.
+              <p className="text-base font-medium text-[#beb6b6] lg:w-[95%]">
+                With our intuitive search functionality, you can easily discover
+                experienced and highly qualified doctors specializing in various
+                medical fields. Whether you're seeking a specialist for a
+                specific condition or a general practitioner, we have a diverse
+                range of healthcare professionals to choose from.
               </p>
             </div>
-            <div className="my-24 flex lg:w-[40%] flex-col gap-10">
-              <h1 className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text text-4xl font-semibold lg:w-[70%] ">
-              Our Mission
+            <div className="my-24 flex flex-col gap-10 lg:w-[40%]">
+              <h1 className="bg-clip-text text-4xl font-semibold text-transparent text-white lg:w-[70%] ">
+                Book Appointments Online
               </h1>
-              <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-              Our mission goes beyond just delivering courses online. We wanted to create a vibrant community of learners, where individuals can connect, collaborate, and learn from one another. We believe that knowledge thrives in an environment of sharing and dialogue, and we foster this spirit of collaboration through forums, live sessions, and networking opportunities.
+              <p className="text-base font-medium text-[#beb6b6] lg:w-[95%]">
+                No more waiting on hold or dealing with complex appointment
+                scheduling. Our platform allows you to book appointments with
+                your preferred doctors at your convenience. Simply select the
+                time slot that works best for you, and you're all set.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-between lg:flex-row lg:gap-10">
+            <div className="my-4 flex flex-col gap-10 lg:w-[40%]">
+              <h1 className="bg-clip-text text-4xl font-semibold text-transparent text-white lg:w-[70%] ">
+                Effortless Health Checkups
+              </h1>
+              <p className="text-base font-medium text-[#beb6b6] lg:w-[95%]">
+                With our intuitive search functionality, you can easily discover
+                experienced and highly qualified doctors specializing in various
+                medical fields. Whether you're seeking a specialist for a
+                specific condition or a general practitioner, we have a diverse
+                range of healthcare professionals to choose from.
+              </p>
+            </div>
+            <div className="my-24 flex flex-col gap-10 lg:w-[40%]">
+              <h1 className="bg-clip-text text-4xl font-semibold text-transparent text-white lg:w-[70%] ">
+                Secure and Private Video Consult
+              </h1>
+              <p className="text-base font-medium text-[#beb6b6] lg:w-[95%]">
+                No more waiting on hold or dealing with complex appointment
+                scheduling. Our platform allows you to book appointments with
+                your preferred doctors at your convenience. Simply select the
+                time slot that works best for you, and you're all set.
               </p>
             </div>
           </div>
@@ -104,17 +134,11 @@ const About = () => {
 
       <StatsComponenet />
       <section className="mx-auto mt-20 flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-white">
-        <LearningGrid />
-        <ContactFormSection />
+        {/* <LearningGrid />
+        <ContactFormSection /> */}
       </section>
 
-      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
-        {/* Reviws from Other Learner */}
-        <h1 className="text-center text-4xl font-semibold mt-8">
-          Reviews from other learners
-        </h1>
-        <ReviewSlider />
-      </div>
+      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white"></div>
       <Footer />
     </div>
   )

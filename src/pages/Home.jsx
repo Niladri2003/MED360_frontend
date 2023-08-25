@@ -7,6 +7,7 @@ import Banner from "../assets/Images/banner.mp4"
 // Component Imports
 import Footer from "../components/Common/Footer"
 import ReviewSlider from "../components/Common/ReviewSlider"
+import Slider from "../components/Slider"
 import CTAButton from "../components/core/HomePage/Button"
 import CodeBlocks from "../components/core/HomePage/CodeBlocks"
 import ExploreMore from "../components/core/HomePage/ExploreMore"
@@ -55,7 +56,7 @@ function Home() {
         </div>
 
         {/* Video */}
-        <div className="mx-3 my-7 shadow-[10px_-5px_50px_-5px] shadow-blue-200">
+        {/* <div className="mx-3 my-7 shadow-[10px_-5px_50px_-5px] shadow-blue-200">
           <video
             className="shadow-[20px_20px_rgba(255,255,255)]"
             muted
@@ -64,7 +65,8 @@ function Home() {
           >
             <source src={Banner} type="video/mp4" />
           </video>
-        </div>
+        </div> */}
+        <Slider />
 
         {/* Code Section 1  */}
         <div>
@@ -182,10 +184,10 @@ function Home() {
         <InstructorSection />
 
         {/* Reviws from Other Learner */}
-        <h1 className="text-center text-4xl font-semibold mt-8">
+        {/* <h1 className="text-center text-4xl font-semibold mt-8">
           Reviews from other learners
         </h1>
-        <ReviewSlider />
+        <ReviewSlider /> */}
       </div>
 
       {/* Footer */}
