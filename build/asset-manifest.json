@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.12e2778a.css",
+    "main.js": "/static/js/main.eb8f9a12.js",
+    "static/media/slide_4.jpg": "/static/media/slide_4.4b7f8973b2c7193388ca.jpg",
+    "static/media/banner.mp4": "/static/media/banner.8e687823b1422880cc3f.mp4",
+    "static/media/slider_3.jpg": "/static/media/slider_3.b20187df04bf70f86ffa.jpg",
+    "static/media/slider_2.jpg": "/static/media/slider_2.519cd6888fe1a35047cd.jpg",
+    "static/media/TimelineImage.png": "/static/media/TimelineImage.a610b1e5d891ac77fe93.png",
+    "static/media/Instructor.png": "/static/media/Instructor.8b4c4f204053f0dfe844.png",
+    "static/media/About_1.jpg": "/static/media/About_1.106c00d0d5fd7489fbe1.jpg",
+    "static/media/Plan_your_lessons.svg": "/static/media/Plan_your_lessons.f123ccf442a2a364a459a7bbec807045.svg",
+    "static/media/Compare_with_others.svg": "/static/media/Compare_with_others.8e950efa990d53f34b35893a1e03cea1.svg",
+    "static/media/contact_page_doc.png": "/static/media/contact_page_doc.010e4b12f910e5150a3d.png",
+    "static/media/About_3.jpg": "/static/media/About_3.8addb39fd9e8c49dd3e2.jpg",
+    "static/media/bghome.svg": "/static/media/bghome.de04eae287ff1d29f0b1.svg",
+    "static/media/rzp_logo.png": "/static/media/rzp_logo.db1cd7db1b52c2ed8e3d.png",
+    "static/media/Mission_img.jpg": "/static/media/Mission_img.e60e9ff1ca790c77a8e2.jpg",
+    "static/media/About_2.jpg": "/static/media/About_2.942706d830d9b7af113b.jpg",
+    "static/media/Know_your_progress.png": "/static/media/Know_your_progress.cf3ea1c51544985430d3.png",
+    "static/media/frame.png": "/static/media/frame.3a238e5f26d676376e1d.png",
+    "static/media/signup.webp": "/static/media/signup.acaf50bcb11d9aec44b4.webp",
+    "static/media/login.webp": "/static/media/login.5eeb0b81544a40330d4b.webp",
+    "static/media/Logo2.svg": "/static/media/Logo2.2d9e85de9e756cda89ffc4582338c939.svg",
+    "static/media/Logo1.svg": "/static/media/Logo1.73daf51e41d665299fc682bc3cb53878.svg",
+    "static/media/Logo3.svg": "/static/media/Logo3.0a56f78fead602f0d54c55ddcdf7e616.svg",
+    "static/media/Logo4.svg": "/static/media/Logo4.5da4c6e0c53e6745b25529891ef82458.svg",
+    "index.html": "/index.html",
+    "main.12e2778a.css.map": "/static/css/main.12e2778a.css.map",
+    "main.eb8f9a12.js.map": "/static/js/main.eb8f9a12.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12e2778a.css",
+    "static/js/main.eb8f9a12.js"
+  ]
+}
