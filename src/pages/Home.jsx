@@ -20,6 +20,7 @@ function Home() {
   return (
     <div>
       {/* Section 1 */}
+      <Slider />
       <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 text-white">
         {/* Become a Instructor Button */}
         <Link to={"/signup"}>
@@ -66,7 +67,6 @@ function Home() {
             <source src={Banner} type="video/mp4" />
           </video>
         </div> */}
-        <Slider />
 
         {/* Code Section 1  */}
         <div>
