@@ -20,6 +20,7 @@ import ApointmentDoc from "./components/core/Dashboard/InstructorDashboard/Apoin
 import MyCourses from "./components/core/Dashboard/MyCourses"
 import MyProfile from "./components/core/Dashboard/MyProfile"
 import Appointments from "./components/core/Dashboard/PatientDashboard/Appointments"
+import BlogPageEdit from "./components/core/Dashboard/PatientDashboard/BlogPageEdit"
 import Consult from "./components/core/Dashboard/PatientDashboard/Consult"
 import HealtRecords from "./components/core/Dashboard/PatientDashboard/HealtRecords"
 import Settings from "./components/core/Dashboard/Settings"
@@ -118,6 +119,7 @@ function App() {
           {/* Route for all users */}
           <Route path="dashboard/my-profile" element={<MyProfile />} />
           <Route path="dashboard/Settings" element={<Settings />} />
+          <Route path="dashboard/blog-edit" element={<BlogPageEdit />} />
           {/* Route only for Doctors */}
           {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
             <>

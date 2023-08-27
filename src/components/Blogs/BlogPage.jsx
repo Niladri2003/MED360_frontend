@@ -32,6 +32,7 @@ const BlogPage = () => {
       Body: body,
       User: `${user?.firstName + " " + user?.lastName}`,
       Date: formattedDate,
+      M_id: `${user?._id}`,
     })
       .then((docref) => {
         toast.dismiss()
@@ -130,6 +131,7 @@ const BlogPage = () => {
             username={blog.User}
             body={blog.Body}
             date={blog.Date}
+            button={false}
           />
         ))}
       </div>

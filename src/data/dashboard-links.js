@@ -70,4 +70,10 @@ export const sidebarLinks = [
     type: ACCOUNT_TYPE.INSTRUCTOR,
     icon: "VscDatabase",
   },
+  {
+    id: 12,
+    name: "Blogs",
+    path: "dashboard/blog-edit",
+    icon: "VscDatabase",
+  },
 ]
