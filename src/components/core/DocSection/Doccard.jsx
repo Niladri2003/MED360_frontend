@@ -31,7 +31,7 @@ const Doccard = () => {
     return (
 
 
-        <div className='grid grid-cols-1 lg:grid-cols-3  md:grid-col-2 gap-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-3  md:grid-cols-2 gap-8'>
             <div className=' bg-white rounded-md p-4 flex flex-col items-center  transform transition duration-500 hover:scale-110'>
                 <div>
                     <img src='https://www.clipartmax.com/png/middle/119-1196258_toonarific-clipart-gallery-woman-silhouette-question-mark.png' alt='photo user' className=' h-24 rounded-full border-4	border-yellow-100 '></img>
@@ -40,6 +40,7 @@ const Doccard = () => {
                 <div id="subtitle" className=' text-sm text-gray-500 text-black mt-1'>GYNOCOLIGIST</div>
                 <div id="subtitle" className='text-gray-500 text-pure-greys-400 text-xs mt-2 '>MBBS | WBHUS | MD</div>
                 {/* <div id="subtitle" className=' text-sm text-gray-500 text-pure-greys-700 text-center my-2 '>A Board Certified Family Doctor <br /> with  seven years of clinical <br />experience, specializing in patient <br /> care, case management  family <br />medicine, and communication</div> */}
+                <div className="text-black  text-[15px] font-bold mt-2"> Visit Fees - ₹500 </div>
 
 
                 <button class="bg-blue-500 hover:bg-blue-400 text-white my-2 font-bold py-2 px-3 border-b-4 border-blue-700 hover:border-blue-500 rounded"
@@ -68,6 +69,7 @@ const Doccard = () => {
                 <div id="subtitle" className='text-gray-500 text-pure-greys-400 text-xs mt-2 '>MBBS | WBHUS | MD</div>
                 {/* <div id="subtitle" className=' text-sm text-gray-500 text-pure-greys-700 text-center my-2 '>A Board Certified Family Doctor <br /> with  seven years of clinical <br />experience, specializing in patient <br /> care, case management  family <br />medicine, and communication</div> */}
 
+                <div className="text-black  text-[15px] font-bold mt-2"> Visit Fees - ₹500 </div>
 
                 <button class="bg-blue-500 hover:bg-blue-400 my-2 text-white font-bold py-2 px-3 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                     Book Appoinment
@@ -84,6 +86,7 @@ const Doccard = () => {
                 <div id="subtitle" className='text-gray-500 text-pure-greys-400 text-xs mt-2 '>MBBS | WBHUS | MD</div>
                 {/* <div id="subtitle" className=' text-sm text-gray-500 text-pure-greys-700 text-center my-2 '>A Board Certified Family Doctor <br /> with  seven  years of clinical <br />experience, specializing in patient <br /> care, case management  family <br />medicine, and communication</div>
                 */}
+                <div className="text-black  text-[15px] font-bold mt-2"> Visit Fees - ₹500 </div>
 
                 <button class="bg-blue-500 hover:bg-blue-400 my-2 text-white font-bold py-2 px-3 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                     Book Appoinment
@@ -100,6 +103,7 @@ const Doccard = () => {
                 <div id="subtitle" className='text-gray-500 text-pure-greys-400 text-xs mt-2 '>MBBS | WBHUS | MD</div>
                 {/* <div id="subtitle" className=' text-sm text-gray-500 text-pure-greys-700 text-center my-2 '>A Board Certified Family Doctor <br /> with  seven years of clinical <br />experience, specializing in patient <br /> care, case management  family <br />medicine, and communication</div> */}
 
+                <div className="text-black  text-[15px] font-bold mt-2"> Visit Fees - ₹500 </div>
 
                 <button class="bg-blue-500 hover:bg-blue-400 my-2 text-white font-bold py-2 px-3 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                     Book Appoinment
@@ -116,6 +120,7 @@ const Doccard = () => {
                 <div id="subtitle" className='text-gray-500 text-pure-greys-400 text-xs mt-2 '>MBBS | WBHUS | MD</div>
                 {/* <div id="subtitle" className=' text-sm text-gray-500 text-pure-greys-700 text-center my-2 '>A Board Certified Family Doctor <br /> with  seven years of clinical <br />experience, specializing in patient <br /> care, case management  family <br />medicine, and communication</div>
  */}
+                <div className="text-black  text-[15px] font-bold mt-2"> Visit Fees - ₹500 </div>
 
                 <button class="bg-blue-500 hover:bg-blue-400 my-2 text-white font-bold py-2 px-3 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                     Book Appoinment
@@ -132,6 +137,7 @@ const Doccard = () => {
                 <div id="subtitle" className='text-gray-500 text-pure-greys-400 text-xs mt-2 '>MBBS | WBHUS | MD</div>
                 {/* <div id="subtitle" className=' text-sm text-gray-500 text-pure-greys-700 text-center my-2 '>A Board Certified Family Doctor <br /> with  seven years of clinical <br />experience, specializing in patient <br /> care, case management  family <br />medicine, and communication</div> */}
 
+                <div className="text-black  text-[15px] font-bold mt-2"> Visit Fees - ₹500 </div>
 
                 <button class="bg-blue-500 hover:bg-blue-400 my-2 text-white font-bold py-2 px-3 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                     Book Appoinment
