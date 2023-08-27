@@ -62,11 +62,22 @@ const Slider = () => {
       </SwiperSlide>
       <SwiperSlide>
         <img src={Img2} className="h-[700px] w-full object-cover" />
+        <div className="absolute left-[80%] top-1/2 -translate-x-1/2 -translate-y-1/2 transform gap-x-1 pb-2  font-bold text-white">
+            <p className="pb-2 text-4xl">
+              {" "}
+              Most trusted health services
+            </p>
+            <Link to={"/signup"}>
+              <button className="rounded-md border-[1px] p-2 hover:bg-blue-100 hover:text-white">
+                Sign Up
+              </button>
+            </Link>
+          </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="relative">
           <img src={Img3} className="h-[700px] w-screen object-cover" />
-          <div className="absolute left-[25%] top-1/2 -translate-x-1/2 -translate-y-1/2 transform   pb-2 font-bold text-white">
+          <div className="absolute left-[25%] top-1/2 -translate-x-1/2 -translate-y-1/2 transform ml-10  pb-2 font-bold text-white">
             <p className="pb-2 text-4xl"> Accessible Healthcare Anywhere</p>
             <div className="mb-2 mt-2 flex flex-row items-center gap-2">
               <MdBiotech size={27} />

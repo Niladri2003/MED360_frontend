@@ -3,18 +3,17 @@ import CTAButton from "./Button";
 import { TypeAnimation } from "react-type-animation";
 import { FaArrowRight } from "react-icons/fa";
 
-const CodeBlocks = ({
-  position,
+const CodeBlocks = ( {image1, image2,
+  
   heading,
   subheading,
   ctabtn1,
   ctabtn2,
-  codeblock,
-  backgroundGradient,
-  codeColor,
+  // hero_img,
+  // hero_img2
 }) => {
   return (
-    <div className={`flex ${position} my-20 justify-between flex-col lg:gap-10 gap-10`}>
+    <div className={`flex my-20 justify-between flex-row lg:gap-10 gap-10`}>
 
 
       {/* Section 1  */}
@@ -40,11 +39,22 @@ const CodeBlocks = ({
         </div>
       </div>
 
+      <img
+        className="hero_pic h-[350px] w-[450px]"
+        src={image1}
+      />
+
+      <img
+        className="hero_pic"
+        src={image2}
+      />
+
+
       {/* Section 2 */}
-      <div className="h-fit code-border flex flex-row py-3 text-[10px] sm:text-sm leading-[18px] sm:leading-6 relative w-[100%] lg:w-[470px]">
-        {backgroundGradient}
-        {/* Indexing */}
-        <div className="text-center flex flex-col   w-[10%] select-none text-richblack-400 font-inter font-bold ">
+      {/* <div className="h-fit code-border flex flex-row py-3 text-[10px] sm:text-sm leading-[18px] sm:leading-6 relative w-[100%] lg:w-[470px]"> */}
+      {/* {backgroundGradient} */}
+      {/* Indexing */}
+      {/* <div className="text-center flex flex-col   w-[10%] select-none text-richblack-400 font-inter font-bold ">
           <p>1</p>
           <p>2</p>
           <p>3</p>
@@ -56,10 +66,10 @@ const CodeBlocks = ({
           <p>9</p>
           <p>10</p>
           <p>11</p>
-        </div>
+        </div> */}
 
-        {/* Codes */}
-        <div
+      {/* Codes */}
+      {/* <div
           className={`w-[90%] flex flex-col gap-2 font-bold font-mono ${codeColor} pr-1`}
         >
           <TypeAnimation
@@ -72,8 +82,8 @@ const CodeBlocks = ({
             }}
             omitDeletionAnimation={true}
           />
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 };
