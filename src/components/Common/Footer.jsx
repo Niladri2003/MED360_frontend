@@ -3,24 +3,23 @@ import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
 
 // Images
-import Logo from "../../assets/Logo/Logo-Full-Light.png";
+import Logo from "../../assets/Logo/logo.jpeg";
 
 // Icons
 import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 const Resources = [
-  "Articles",
-  "Blog",
-  "Chart Sheet",
-  "Code challenges",
-  "Docs",
-  "Projects",
-  "Videos",
-  "Workspaces",
+  "Orthopaedics",
+  "Nephrology",
+  "Bariatric Surgery",
+  "Cardiology",
+  "Pulmonology",
+  "Gastroenterology",
+  "Spine Surgery",
 ];
-const Plans = ["Paid memberships", "For students", "Business solutions"];
-const Community = ["Forums", "Chapters", "Events"];
+const Plans = ["Paid memberships", "For Doctor", "Business Expand"];
+const Community = ["Forums", "Retirements", "Events"];
 
 const Footer = () => {
   return (
@@ -30,12 +29,12 @@ const Footer = () => {
           {/* Section 1 */}
           <div className="lg:w-[50%] flex flex-wrap flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
             <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
-              <img src={Logo} alt="" className="object-contain" />
+              <img src={Logo} alt="" className="object-contain h-20 w-20  rounded-md" />
               <h1 className="text-richblack-50 font-semibold text-[16px]">
                 Company
               </h1>
               <div className="flex flex-col gap-2">
-                {["About", "Careers", "Affiliates"].map((ele, i) => {
+                {["About", "Contact", "Blogs"].map((ele, i) => {
                   return (
                     <div
                       key={i}
@@ -85,7 +84,7 @@ const Footer = () => {
 
             <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
               <h1 className="text-richblack-50 font-semibold text-[16px]">
-                Plans
+                Partnership
               </h1>
 
               <div className="flex flex-col gap-2 mt-2">
@@ -172,7 +171,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ CodeHelp © 2023 Studynotion</div>
+          <div className="text-center">Made By Team 404 Lead by Niladri</div>
         </div>
       </div>
     </div>
