@@ -53,7 +53,7 @@ const DocShowCard = () => {
         </div>
       </div>
       <div className="h-[1px] w-full"></div>
-      <div>HE</div>
+      <div></div>
     </div>
   )
 }
