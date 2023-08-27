@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 // React Router
 import { Route, Routes, useNavigate } from "react-router-dom"
 
+import BlogPage from "./components/Blogs/BlogPage"
 // Components
 import Navbar from "./components/Common/Navbar"
 import OpenRoute from "./components/core/Auth/OpenRoute"
@@ -15,8 +16,12 @@ import Cart from "./components/core/Dashboard/Cart"
 import EditCourse from "./components/core/Dashboard/EditCourse"
 import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses"
 import Instructor from "./components/core/Dashboard/Instructor"
+import ApointmentDoc from "./components/core/Dashboard/InstructorDashboard/ApointmentDoc"
 import MyCourses from "./components/core/Dashboard/MyCourses"
 import MyProfile from "./components/core/Dashboard/MyProfile"
+import Appointments from "./components/core/Dashboard/PatientDashboard/Appointments"
+import Consult from "./components/core/Dashboard/PatientDashboard/Consult"
+import HealtRecords from "./components/core/Dashboard/PatientDashboard/HealtRecords"
 import Settings from "./components/core/Dashboard/Settings"
 import VideoDetails from "./components/core/ViewCourse/VideoDetails"
 import About from "./pages/About"
@@ -24,6 +29,7 @@ import Catalog from "./pages/Catalog"
 import Contact from "./pages/Contact"
 import CourseDetails from "./pages/CourseDetails"
 import Dashboard from "./pages/Dashboard"
+import Doctors from "./pages/Doctors"
 import Error from "./pages/Error"
 import ForgotPassword from "./pages/ForgotPassword"
 // Pages
@@ -56,6 +62,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blogs" element={<BlogPage />} />
+        <Route path="/doctors" element={<Doctors />} />
         <Route path="courses/:courseId" element={<CourseDetails />} />
         <Route path="catalog/:catalogName" element={<Catalog />} />
         {/* Open Route - for Only Non Logged in User */}
@@ -110,19 +118,23 @@ function App() {
           {/* Route for all users */}
           <Route path="dashboard/my-profile" element={<MyProfile />} />
           <Route path="dashboard/Settings" element={<Settings />} />
-          {/* Route only for Instructors */}
+          {/* Route only for Doctors */}
           {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
             <>
               <Route path="dashboard/instructor" element={<Instructor />} />
               <Route path="dashboard/my-courses" element={<MyCourses />} />
               <Route path="dashboard/add-course" element={<AddCourse />} />
               <Route
+                path="dashboard/appointments-doc"
+                element={<ApointmentDoc />}
+              />
+              <Route
                 path="dashboard/edit-course/:courseId"
                 element={<EditCourse />}
               />
             </>
           )}
-          {/* Route only for Students */}
+          {/* Route only for Patiensts */}
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (
             <>
               <Route
@@ -130,6 +142,15 @@ function App() {
                 element={<EnrolledCourses />}
               />
               <Route path="/dashboard/cart" element={<Cart />} />
+              <Route
+                path="/dashboard/health-records"
+                element={<HealtRecords />}
+              />
+              <Route
+                path="/dashboard/appointments"
+                element={<Appointments />}
+              />
+              <Route path="/dashboard/consult" element={<Consult />} />
             </>
           )}
           <Route path="dashboard/settings" element={<Settings />} />
