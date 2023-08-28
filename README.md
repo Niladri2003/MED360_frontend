@@ -1,29 +1,39 @@
-# Hospital Management System
-## Project Overview
-The Hospital Management System is a software application designed to streamline and enhance the management of hospital operations. It offers a comprehensive suite of features to assist in efficiently managing patient information, medical records, appointments, billing, and more.
+![logo](https://github.com/Niladri2003/Interhacktive_frontend/assets/109953155/2c3bfc16-3cf4-42c0-907e-f3145caabb1b)
+# MED360
 
-## Features
-### Patient Management: 
-Maintain detailed patient records, including personal information, medical history, and treatment plans.
-### Appointment Scheduling: 
-Schedule, reschedule, and manage appointments for patients and doctors.
-### Medical Records: 
-Store and access patient medical records securely, allowing doctors to make informed decisions.
-### Staff Management: 
-Manage staff profiles, roles, and responsibilities within the hospital.
+
+## Project Overview
+The Med360 is a online consultant plartform . Where both doctor and patient can register themselves as a patient and as a doctor. Doctor can manage their appoinment from separate section.
+
+## DEMO VIDEO
+[Yotube link](https://www.youtube.com/watch?v=GH6hKpTKpqE)
+
+## For Patient--
+1) THEY CAN REGISTER THEMSELVES AND BOOK THEIR APPOINMENT WITH APPROPIATE DOCTOR
+2) tHEY CAN UPLOAD THEIR TEST REPORT AND CAN ACCESS FROM ANYWHERE FROM THE WORLD
+3) THEY CAN ACCESS HIGH QUALITY BLOGES CONTENT AND SHARE THEIR CONTENT GIVEN BY THE DOCTOR
+
+# FOR Doctor
+1) As like patient they can also register themselves
+2) Publish themselves with their valuable deegree and experience to attract attention
 
 
 ## Technologies Used
-Programming Languages: [List programming languages used, e.g., Javascript]
-Database Management: [Specify the database management system used, e.g., Mongodb]
-Frameworks and Libraries: [Mention any frameworks or libraries used, e.g., React, Node Js, Express Js]
-Other Tools: [List any other tools or technologies used, e.g., Git, Docker, Google Cloud]
+Programming Languages: [NODE JS , EXPRESS JS , JAVASCRIPT]
+Database Management: [FIREBASE , MONGO DB]
+Frameworks and Libraries: [TAILWIND , REACT ]
+Other Tools: [CLOUDINARY, Git, Google Cloud , NODE MAILER ,POSTMAN]
 
 ## Installation and Setup
 1> Clone the repository: 
 git clone https://github.com/Niladri2003/Interhacktive_frontend-
 2> Navigate to the project directory: 
-cd hospital-management-system
+cd MED360-system
+
+## FUTURE ASPECT (IDEAS THAT LEFT BEHIND FOR TIME)
+1) We will implement "Zegocloud" for smooth video with voice calling conversation
+2) We will integrate The payment collecting method by "Razorpay"
+3) Appoinment creation and health record uploading(all-most done) 
 
 ## Contributing
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "improvement". Don't forget to star this project!!
@@ -34,6 +44,7 @@ Commit your Changes (git commit -m 'Add Feature 1')
 Push to the Branch (git push origin feature/Feature1)
 Open a Pull Request
 
-## Contact
-For questions or inquiries, please contact Niladri Adak at niladri.adak.21@aot.edu.in.
-
+## Contributors
+[@Niladri2003](https://github.com/Niladri2003)
+[@arnabpal15](https://github.com/arnabpal16)
+[@swarnab](https://github.com/swarnab007)
