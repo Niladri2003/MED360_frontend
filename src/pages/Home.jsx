@@ -17,7 +17,6 @@ import ExploreMore from "../components/core/HomePage/ExploreMore"
 import HighlightText from "../components/core/HomePage/HighlightText"
 import InstructorSection from "../components/core/HomePage/InstructorSection"
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
-import TimelineSection from "../components/core/HomePage/Timeline"
 
 function Home() {
   return (
@@ -125,7 +124,6 @@ function Home() {
           {/* Job that is in Demand - Section 1 */}
 
           {/* Timeline Section - Section 2 */}
-          <TimelineSection />
 
           {/* Learning Language Section - Section 3 */}
           <LearningLanguageSection />
