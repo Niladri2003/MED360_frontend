@@ -16,7 +16,7 @@ import Upload from "../Upload"
 import ChipInput from "./ChipInput"
 import RequirementsField from "./RequirementsField"
 
-export default function CourseInformationForm() {
+export default function DoctorInformationForm() {
   const {
     register,
     handleSubmit,
