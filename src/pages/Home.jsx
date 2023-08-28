@@ -33,7 +33,7 @@ function Home() {
             </div>
           </div>
         </Link> */}
-        <p>Trending section</p>
+        <p className="mt-5 text-lg">Trending section</p>
         <HomeCardGroup />
 
         {/* Heading */}
