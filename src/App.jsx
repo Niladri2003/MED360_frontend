@@ -12,10 +12,8 @@ import Navbar from "./components/Common/Navbar"
 import OpenRoute from "./components/core/Auth/OpenRoute"
 import PrivateRoute from "./components/core/Auth/PrivateRoute"
 import AddCourse from "./components/core/Dashboard/AddCourse"
-import Cart from "./components/core/Dashboard/Cart"
-import EditCourse from "./components/core/Dashboard/EditCourse"
+import DoctorDashboard from "./components/core/Dashboard/DoctorDashboard"
 import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses"
-import Instructor from "./components/core/Dashboard/Instructor"
 import ApointmentDoc from "./components/core/Dashboard/InstructorDashboard/ApointmentDoc"
 import MyCourses from "./components/core/Dashboard/MyCourses"
 import MyProfile from "./components/core/Dashboard/MyProfile"
@@ -24,7 +22,6 @@ import BlogPageEdit from "./components/core/Dashboard/PatientDashboard/BlogPageE
 import Consult from "./components/core/Dashboard/PatientDashboard/Consult"
 import HealtRecords from "./components/core/Dashboard/PatientDashboard/HealtRecords"
 import Settings from "./components/core/Dashboard/Settings"
-import VideoDetails from "./components/core/ViewCourse/VideoDetails"
 import About from "./pages/About"
 import Catalog from "./pages/Catalog"
 import Contact from "./pages/Contact"
@@ -121,29 +118,35 @@ function App() {
           <Route path="dashboard/Settings" element={<Settings />} />
           <Route path="dashboard/blog-edit" element={<BlogPageEdit />} />
           {/* Route only for Doctors */}
-          {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
+          {user?.accountType === ACCOUNT_TYPE.DOCTOR && (
             <>
-              <Route path="dashboard/instructor" element={<Instructor />} />
-              <Route path="dashboard/my-courses" element={<MyCourses />} />
-              <Route path="dashboard/add-course" element={<AddCourse />} />
+              <Route path="dashboard/doctor" element={<DoctorDashboard />} />
+              <Route
+                path="dashboard/all-publishments"
+                element={<MyCourses />}
+              />
+              <Route
+                path="dashboard/publish-yourself"
+                element={<AddCourse />}
+              />
               <Route
                 path="dashboard/appointments-doc"
                 element={<ApointmentDoc />}
               />
-              <Route
+              {/* <Route
                 path="dashboard/edit-course/:courseId"
                 element={<EditCourse />}
-              />
+              /> */}
             </>
           )}
           {/* Route only for Patiensts */}
-          {user?.accountType === ACCOUNT_TYPE.STUDENT && (
+          {user?.accountType === ACCOUNT_TYPE.PATIENT && (
             <>
               <Route
                 path="dashboard/enrolled-courses"
                 element={<EnrolledCourses />}
               />
-              <Route path="/dashboard/cart" element={<Cart />} />
+
               <Route
                 path="/dashboard/health-records"
                 element={<HealtRecords />}
@@ -165,16 +168,7 @@ function App() {
               <ViewCourse />
             </PrivateRoute>
           }
-        >
-          {user?.accountType === ACCOUNT_TYPE.STUDENT && (
-            <>
-              <Route
-                path="view-course/:courseId/section/:sectionId/sub-section/:subSectionId"
-                element={<VideoDetails />}
-              />
-            </>
-          )}
-        </Route>
+        ></Route>
 
         {/* 404 Page */}
         <Route path="*" element={<Error />} />

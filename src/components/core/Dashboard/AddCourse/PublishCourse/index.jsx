@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom"
 
 import { editCourseDetails } from "../../../../../services/operations/courseDetailsAPI"
 import { resetCourseState, setStep } from "../../../../../slices/courseSlice"
-import { COURSE_STATUS } from "../../../../../utils/constants"
 import IconBtn from "../../../../Common/IconBtn"
 
 export default function PublishCourse() {
@@ -17,11 +16,11 @@ export default function PublishCourse() {
   const { course } = useSelector((state) => state.course)
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    if (course?.status === COURSE_STATUS.PUBLISHED) {
-      setValue("public", true)
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (course?.status === COURSE_STATUS.PUBLISHED) {
+  //     setValue("public", true)
+  //   }
+  // }, [])
 
   const goBack = () => {
     dispatch(setStep(2))
@@ -32,35 +31,8 @@ export default function PublishCourse() {
     navigate("/dashboard/my-courses")
   }
 
-  const handleCoursePublish = async () => {
-    // check if form has been updated or not
-    if (
-      (course?.status === COURSE_STATUS.PUBLISHED &&
-        getValues("public") === true) ||
-      (course?.status === COURSE_STATUS.DRAFT && getValues("public") === false)
-    ) {
-      // form has not been updated
-      // no need to make api call
-      goToCourses()
-      return
-    }
-    const formData = new FormData()
-    formData.append("courseId", course._id)
-    const courseStatus = getValues("public")
-      ? COURSE_STATUS.PUBLISHED
-      : COURSE_STATUS.DRAFT
-    formData.append("status", courseStatus)
-    setLoading(true)
-    const result = await editCourseDetails(formData, token)
-    if (result) {
-      goToCourses()
-    }
-    setLoading(false)
-  }
-
   const onSubmit = (data) => {
     // console.log(data)
-    handleCoursePublish()
   }
 
   return (
@@ -90,7 +62,7 @@ export default function PublishCourse() {
             disabled={loading}
             type="button"
             onClick={goBack}
-            className="flex cursor-pointer items-center gap-x-2 rounded-md bg-richblack-300 py-[8px] px-[20px] font-semibold text-richblack-900"
+            className="flex cursor-pointer items-center gap-x-2 rounded-md bg-richblack-300 px-[20px] py-[8px] font-semibold text-richblack-900"
           >
             Back
           </button>

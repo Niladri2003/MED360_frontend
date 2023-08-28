@@ -14,7 +14,7 @@ function SignupForm() {
   const dispatch = useDispatch()
 
   // student or instructor
-  const [accountType, setAccountType] = useState(ACCOUNT_TYPE.STUDENT)
+  const [accountType, setAccountType] = useState(ACCOUNT_TYPE.PATIENT)
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -40,7 +40,7 @@ function SignupForm() {
   // Handle Form Submission
   const handleOnSubmit = (e) => {
     e.preventDefault()
-
+    console.log(accountType)
     if (password !== confirmPassword) {
       toast.error("Passwords Do Not Match")
       return
@@ -64,20 +64,20 @@ function SignupForm() {
       password: "",
       confirmPassword: "",
     })
-    setAccountType(ACCOUNT_TYPE.STUDENT)
+    setAccountType(ACCOUNT_TYPE.PATIENT)
   }
 
   // data to pass to Tab component
   const tabData = [
     {
       id: 1,
-      tabName: "Student",
-      type: ACCOUNT_TYPE.STUDENT,
+      tabName: "Patient",
+      type: ACCOUNT_TYPE.PATIENT,
     },
     {
       id: 2,
-      tabName: "Instructor",
-      type: ACCOUNT_TYPE.INSTRUCTOR,
+      tabName: "Doctor",
+      type: ACCOUNT_TYPE.DOCTOR,
     },
   ]
 

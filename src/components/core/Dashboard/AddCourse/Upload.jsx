@@ -18,9 +18,7 @@ export default function Upload({
 }) {
   const { course } = useSelector((state) => state.course)
   const [selectedFile, setSelectedFile] = useState(null)
-  const [previewSource, setPreviewSource] = useState(
-    viewData ? viewData : editData ? editData : ""
-  )
+  const [previewSource, setPreviewSource] = useState(null)
   const inputRef = useRef(null)
 
   const onDrop = (acceptedFiles) => {
@@ -64,8 +62,8 @@ export default function Upload({
       </label>
       <div
         className={`${
-          isDragActive ? "bg-richblack-600" : "bg-richblack-700"
-        } flex min-h-[250px] cursor-pointer items-center justify-center rounded-md border-2 border-dotted border-richblack-500`}
+          isDragActive ? "bg-[#b4e7ed]" : "bg-[#53878d]"
+        } flex min-h-[250px] cursor-pointer items-center justify-center rounded-md  border-dotted `}
       >
         {previewSource ? (
           <div className="flex w-full flex-col p-6">
@@ -76,7 +74,7 @@ export default function Upload({
                 className="h-full w-full rounded-md object-cover"
               />
             ) : (
-              <Player aspectRatio="16:9" playsInline src={previewSource} />
+              <Player playsInline src={previewSource} />
             )}
             {!viewData && (
               <button
@@ -86,7 +84,7 @@ export default function Upload({
                   setSelectedFile(null)
                   setValue(name, null)
                 }}
-                className="mt-3 text-richblack-400 underline"
+                className="mt-3 text-white "
               >
                 Cancel
               </button>
@@ -99,17 +97,12 @@ export default function Upload({
           >
             <input {...getInputProps()} ref={inputRef} />
             <div className="grid aspect-square w-14 place-items-center rounded-full bg-pure-greys-800">
-              <FiUploadCloud className="text-2xl text-yellow-50" />
+              <FiUploadCloud className="text-2xl text-white" />
             </div>
-            <p className="mt-2 max-w-[200px] text-center text-sm text-richblack-200">
+            <p className="mt-2 max-w-[200px] text-center text-sm text-[#fafa]">
               Drag and drop an {!video ? "image" : "video"}, or click to{" "}
-              <span className="font-semibold text-yellow-50">Browse</span> a
-              file
+              <span className="font-semibold text-white">Browse</span> a file
             </p>
-            <ul className="mt-10 flex list-disc justify-between space-x-12 text-center  text-xs text-richblack-200">
-              <li>Aspect ratio 16:9</li>
-              <li>Recommended size 1024x576</li>
-            </ul>
           </div>
         )}
       </div>
