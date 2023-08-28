@@ -37,7 +37,6 @@ import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import UpdatePassword from "./pages/UpdatePassword"
 import VerifyEmail from "./pages/VerifyEmail"
-import ViewCourse from "./pages/ViewCourse"
 import { getUserDetails } from "./services/operations/profileAPI"
 import { ACCOUNT_TYPE } from "./utils/constants"
 
@@ -161,15 +160,6 @@ function App() {
           )}
           <Route path="dashboard/settings" element={<Settings />} />
         </Route>
-
-        {/* For the watching course lectures */}
-        <Route
-          element={
-            <PrivateRoute>
-              <ViewCourse />
-            </PrivateRoute>
-          }
-        ></Route>
 
         {/* 404 Page */}
         <Route path="*" element={<Error />} />

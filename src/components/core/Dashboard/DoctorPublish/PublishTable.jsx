@@ -14,7 +14,7 @@ import { formatDate } from "../../../../services/formatDate"
 import {
   deleteCourse,
   fetchInstructorCourses,
-} from "../../../../services/operations/courseDetailsAPI"
+} from "../../../../services/operations/doctorDetailsAPI"
 import ConfirmationModal from "../../../Common/ConfirmationModal"
 
 export default function PublishTable({ courses, setCourses }) {

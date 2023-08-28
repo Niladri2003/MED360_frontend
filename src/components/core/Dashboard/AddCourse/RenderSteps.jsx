@@ -2,7 +2,6 @@ import { FaCheck } from "react-icons/fa"
 import { useSelector } from "react-redux"
 
 import DoctorInformationForm from "./DocPublishInfo/DoctorInformationForm"
-import PublishCourse from "./PublishCourse"
 
 export default function RenderSteps() {
   const { step } = useSelector((state) => state.course)

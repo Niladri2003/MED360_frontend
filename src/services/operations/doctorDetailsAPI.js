@@ -24,7 +24,7 @@ const {
   LECTURE_COMPLETION_API,
 } = courseEndpoints
 
-export const getAllCourses = async () => {
+export const getAllDoctors = async () => {
   const toastId = toast.loading("Loading...")
   let result = []
   try {
@@ -66,7 +66,7 @@ export const fetchCourseDetails = async (courseId) => {
 }
 
 // fetching the available course categories
-export const fetchCourseCategories = async () => {
+export const fetchDocCategories = async () => {
   let result = []
   try {
     const response = await apiConnector("GET", COURSE_CATEGORIES_API)
@@ -95,7 +95,7 @@ export const addCourseDetails = async (data, token) => {
     if (!response?.data?.success) {
       throw new Error("Could Not Add Course Details")
     }
-    toast.success("Course Details Added Successfully")
+    toast.success("Doctor Added Successfully")
     result = response?.data?.data
   } catch (error) {
     console.log("CREATE COURSE API ERROR............", error)

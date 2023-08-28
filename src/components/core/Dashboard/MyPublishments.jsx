@@ -3,7 +3,7 @@ import { VscAdd } from "react-icons/vsc"
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 
-import { fetchInstructorCourses } from "../../../services/operations/courseDetailsAPI"
+import { fetchInstructorCourses } from "../../../services/operations/doctorDetailsAPI"
 import IconBtn from "../../Common/IconBtn"
 import PublishTable from "./DoctorPublish/PublishTable"
 
@@ -16,7 +16,7 @@ export default function MyPublishments() {
     const fetchCourses = async () => {
       const result = await fetchInstructorCourses(token)
       if (result) {
-        setCourses(result)
+        setCourses()
       }
     }
     fetchCourses()
