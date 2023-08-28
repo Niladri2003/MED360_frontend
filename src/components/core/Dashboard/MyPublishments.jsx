@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 import { fetchInstructorCourses } from "../../../services/operations/courseDetailsAPI"
 import IconBtn from "../../Common/IconBtn"
-import PublishTable from "./InstructorCourses/PublishTable"
+import PublishTable from "./DoctorPublish/PublishTable"
 
 export default function MyPublishments() {
   const { token } = useSelector((state) => state.auth)
