@@ -15,8 +15,9 @@ import AddCourse from "./components/core/Dashboard/AddCourse"
 import DoctorDashboard from "./components/core/Dashboard/DoctorDashboard"
 import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses"
 import ApointmentDoc from "./components/core/Dashboard/InstructorDashboard/ApointmentDoc"
-import MyCourses from "./components/core/Dashboard/MyCourses"
 import MyProfile from "./components/core/Dashboard/MyProfile"
+import MyCourses from "./components/core/Dashboard/MyPublishments"
+import MyPublishments from "./components/core/Dashboard/MyPublishments"
 import Appointments from "./components/core/Dashboard/PatientDashboard/Appointments"
 import BlogPageEdit from "./components/core/Dashboard/PatientDashboard/BlogPageEdit"
 import Consult from "./components/core/Dashboard/PatientDashboard/Consult"
@@ -123,7 +124,7 @@ function App() {
               <Route path="dashboard/doctor" element={<DoctorDashboard />} />
               <Route
                 path="dashboard/all-publishments"
-                element={<MyCourses />}
+                element={<MyPublishments />}
               />
               <Route
                 path="dashboard/publish-yourself"
