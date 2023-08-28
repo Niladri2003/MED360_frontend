@@ -1,11 +1,11 @@
 // Icons Import
 import { FaArrowRight } from "react-icons/fa"
 import { Link } from "react-router-dom"
-import hero_img from "../assets/Images/hero_gif.gif"
-import hero_img2 from "../assets/Images/hero_gif2.gif"
 
 // Image and Video Import
 import Banner from "../assets/Images/banner.mp4"
+import hero_img2 from "../assets/Images/hero_gif2.gif"
+import hero_img from "../assets/Images/hero_gif.gif"
 // Component Imports
 import Footer from "../components/Common/Footer"
 import HomeCardGroup from "../components/Common/HomeCardGroup"
@@ -40,13 +40,16 @@ function Home() {
         {/* Heading */}
         <div className="text-center text-4xl font-semibold">
           Your New Smile
-          
           <HighlightText text={"Starts From Here"} />
         </div>
 
         {/* Sub Heading */}
         <div className="-mt-3 w-[90%] text-center text-lg font-bold text-richblack-300">
-        Your journey to a healthier smile begins right here. With our online doctor consultation app, you can access expert advice and personalized care from the comfort of your home.Take the first step towards a brighter, healthier you by connecting with experienced doctors through our user-friendly online platform.
+          Your journey to a healthier smile begins right here. With our online
+          doctor consultation app, you can access expert advice and personalized
+          care from the comfort of your home.Take the first step towards a
+          brighter, healthier you by connecting with experienced doctors through
+          our user-friendly online platform.
         </div>
 
         {/* CTA Buttons */}
@@ -59,25 +62,13 @@ function Home() {
           </CTAButton>
         </div>
 
-        {/* Video */}
-        {/* <div className="mx-3 my-7 shadow-[10px_-5px_50px_-5px] shadow-blue-200">
-          <video
-            className="shadow-[20px_20px_rgba(255,255,255)]"
-            muted
-            loop
-            autoPlay
-          >
-            <source src={Banner} type="video/mp4" />
-          </video>
-        </div> */}
-
-        {/* Code Section 1  */}
         <div>
           <CodeBlocks
             position={"lg:flex-row"}
             heading={
               <div className="text-4xl font-semibold">
-                Meet with our our  <HighlightText text={"Co-Founder"} /> Arnab Maity
+                Meet with our our <HighlightText text={"Co-Founder"} /> Arnab
+                Maity
               </div>
             }
             subheading={
@@ -93,9 +84,7 @@ function Home() {
               link: "/signup",
               active: false,
             }}
-
             image1={hero_img}
-
           />
         </div>
 
@@ -110,7 +99,7 @@ function Home() {
               </div>
             }
             subheading={
-              "Go ahead, give it a try. Our hands-on learning environment means you'll be writing real code from your very first lesson."
+              "In no impression assistance contrasted. Manners she wishing justice hastily new anxious. At discovery discourse departure ."
             }
             ctabtn1={{
               btnText: "Continue Lesson",
@@ -122,60 +111,18 @@ function Home() {
               link: "/signup",
               active: false,
             }}
-
             image2={hero_img2}
-
-          // codeColor={"text-white"}
-          // codeblock={`import React from "react";\n import CTAButton from "./Button";\nimport TypeAnimation from "react-type";\nimport { FaArrowRight } from "react-icons/fa";\n\nconst Home = () => {\nreturn (\n<div>Home</div>\n)\n}\nexport default Home;`}
-          // backgroundGradient={<div className="codeblock2 absolute"></div>}
-
-
           />
         </div>
 
         {/* Explore Section */}
-        <ExploreMore />
+        {/* <ExploreMore /> */}
       </div>
 
       {/* Section 2 */}
       <div className="bg-pure-greys-5 text-richblack-700">
-        <div className="homepage_bg h-[320px]">
-          {/* Explore Full Catagory Section */}
-          <div className="mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8">
-            <div className="lg:h-[150px]"></div>
-            <div className="flex flex-row gap-7 text-white lg:mt-8">
-              <CTAButton active={true} linkto={"/signup"}>
-                <div className="flex items-center gap-2">
-                  Explore Full Catalog
-                  <FaArrowRight />
-                </div>
-              </CTAButton>
-              <CTAButton active={false} linkto={"/login"}>
-                Learn More
-              </CTAButton>
-            </div>
-          </div>
-        </div>
-
         <div className="mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 ">
           {/* Job that is in Demand - Section 1 */}
-          <div className="mb-10 mt-[-100px] flex flex-col justify-between gap-7 lg:mt-20 lg:flex-row lg:gap-0">
-            <div className="text-4xl font-semibold lg:w-[45%] ">
-              Steps to be followed to {" "}
-              <br/>
-              <HighlightText text={" sign up "} />
-            </div>
-            <div className="flex flex-col items-start gap-10 lg:w-[40%]">
-              <div className="text-[16px]">
-                The modern StudyNotion is the dictates its own terms. Today, to
-                be a competitive specialist requires more than professional
-                skills.
-              </div>
-              <CTAButton active={true} linkto={"/signup"}>
-                <div className="">Learn More</div>
-              </CTAButton>
-            </div>
-          </div>
 
           {/* Timeline Section - Section 2 */}
           <TimelineSection />
@@ -188,7 +135,7 @@ function Home() {
       {/* Section 3 */}
       <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
         {/* Become a instructor section */}
-        <InstructorSection />
+        {/* <InstructorSection /> */}
 
         {/* Reviws from Other Learner */}
         {/* <h1 className="text-center text-4xl font-semibold mt-8">
@@ -204,7 +151,6 @@ function Home() {
 }
 
 export default Home
-
 
 // <!DOCTYPE html>
 // <html>

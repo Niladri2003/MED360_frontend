@@ -1,10 +1,13 @@
-import React from "react";
-import CTAButton from "./Button";
-import { TypeAnimation } from "react-type-animation";
-import { FaArrowRight } from "react-icons/fa";
+import React from "react"
+import { FaArrowRight } from "react-icons/fa"
+import { TypeAnimation } from "react-type-animation"
 
-const CodeBlocks = ( {image1, image2,
-  
+import CTAButton from "./Button"
+
+const CodeBlocks = ({
+  image1,
+  image2,
+
   heading,
   subheading,
   ctabtn1,
@@ -13,21 +16,19 @@ const CodeBlocks = ( {image1, image2,
   // hero_img2
 }) => {
   return (
-    <div className={`flex my-20 justify-between flex-row lg:gap-10 gap-10`}>
-
-
+    <div className={`my-20 flex flex-row justify-between gap-10 lg:gap-10`}>
       {/* Section 1  */}
-      <div className="w-[100%] lg:w-[50%] flex flex-col gap-8">
+      <div className="flex w-[100%] flex-col gap-8 lg:w-[50%]">
         {heading}
 
         {/* Sub Heading */}
-        <div className="text-richblack-300 text-base font-bold w-[85%] -mt-3">
+        <div className="-mt-3 w-[85%] text-base font-bold text-white">
           {subheading}
         </div>
 
         {/* Button Group */}
-        <div className="flex gap-7 mt-7">
-          <CTAButton active={ctabtn1.active} linkto={ctabtn1.link}>
+        <div className="mt-7 flex gap-7">
+          <CTAButton active={false} linkto={ctabtn1.link}>
             <div className="flex items-center gap-2">
               {ctabtn1.btnText}
               <FaArrowRight />
@@ -39,16 +40,9 @@ const CodeBlocks = ( {image1, image2,
         </div>
       </div>
 
-      <img
-        className="hero_pic h-[350px] w-[450px]"
-        src={image1}
-      />
+      <img className="hero_pic h-[350px] w-[450px]" src={image1} />
 
-      <img
-        className="hero_pic"
-        src={image2}
-      />
-
+      <img className="hero_pic" src={image2} />
 
       {/* Section 2 */}
       {/* <div className="h-fit code-border flex flex-row py-3 text-[10px] sm:text-sm leading-[18px] sm:leading-6 relative w-[100%] lg:w-[470px]"> */}
@@ -85,7 +79,7 @@ const CodeBlocks = ( {image1, image2,
         </div> */}
       {/* </div> */}
     </div>
-  );
-};
+  )
+}
 
-export default CodeBlocks;
+export default CodeBlocks

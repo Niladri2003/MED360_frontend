@@ -23,4 +23,8 @@ export const NavbarLinks = [
     title: "Blogs",
     path: "/blogs",
   },
+  {
+    title: "Doctors",
+    path: "/doctors",
+  },
 ]

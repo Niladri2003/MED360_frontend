@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 
-import { editCourseDetails } from "../../../../../services/operations/courseDetailsAPI"
+import { editCourseDetails } from "../../../../../services/operations/doctorDetailsAPI"
 import { resetCourseState, setStep } from "../../../../../slices/courseSlice"
 import IconBtn from "../../../../Common/IconBtn"
 
