@@ -4,7 +4,7 @@ import { RxCross2 } from "react-icons/rx"
 import ReactStars from "react-rating-stars-component"
 import { useSelector } from "react-redux"
 
-import { createRating } from "../../../services/operations/courseDetailsAPI"
+import { createRating } from "../../../services/operations/doctorDetailsAPI"
 import IconBtn from "../../Common/IconBtn"
 
 export default function CourseReviewModal({ setReviewModal }) {
@@ -99,7 +99,7 @@ export default function CourseReviewModal({ setReviewModal }) {
             <div className="mt-6 flex w-11/12 justify-end gap-x-2">
               <button
                 onClick={() => setReviewModal(false)}
-                className={`flex cursor-pointer items-center gap-x-2 rounded-md bg-richblack-300 py-[8px] px-[20px] font-semibold text-richblack-900`}
+                className={`flex cursor-pointer items-center gap-x-2 rounded-md bg-richblack-300 px-[20px] py-[8px] font-semibold text-richblack-900`}
               >
                 Cancel
               </button>

@@ -4,7 +4,7 @@ import { BsChevronDown } from "react-icons/bs"
 import { useSelector } from "react-redux"
 import { Link, matchPath, useLocation } from "react-router-dom"
 
-import logo from "../../assets/Images/logo_removed.png"
+import logo from "../../assets/Logo/logo.jpeg"
 import { NavbarLinks } from "../../data/navbar-links"
 import { apiConnector } from "../../services/apiConnector"
 import { categories } from "../../services/apis"
@@ -60,7 +60,7 @@ function Navbar() {
 
   return (
     <div
-      className={`flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${location.pathname !== "/" ? "bg-[#46b9ea]" : "bg-[#46b9ea]"
+      className={`flex h-16 items-center justify-center border-b-[1px] border-b-richblack-700 ${location.pathname !== "/" ? "bg-[#46b9ea]" : "bg-[#46b9ea]"
         } transition-all duration-200`}
     >
       <div className="flex w-11/12 max-w-maxContent items-center justify-between">
@@ -69,10 +69,10 @@ function Navbar() {
           <img
             src={logo}
             alt="Logo"
-            width={150}
-            height={100}
+            width={50}
+            height={10}
             loading="lazy"
-            className="rounded-full"
+            className="rounded-full "
           />
           {/* <p className="font-bold text-white">MED360</p> */}
         </Link>
