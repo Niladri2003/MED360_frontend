@@ -4,7 +4,7 @@ import { BsChevronDown } from "react-icons/bs"
 import { useSelector } from "react-redux"
 import { Link, matchPath, useLocation } from "react-router-dom"
 
-import logo from "../../assets/Logo/icon2.png"
+import logo from "../../assets/Images/logo_removed.png"
 import { NavbarLinks } from "../../data/navbar-links"
 import { apiConnector } from "../../services/apiConnector"
 import { categories } from "../../services/apis"
@@ -40,7 +40,7 @@ function Navbar() {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    ;(async () => {
+    ; (async () => {
       setLoading(true)
       try {
         const res = await apiConnector("GET", categories.CATEGORIES_API)
@@ -60,22 +60,21 @@ function Navbar() {
 
   return (
     <div
-      className={`flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${
-        location.pathname !== "/" ? "bg-[#46b9ea]" : "bg-[#46b9ea]"
-      } transition-all duration-200`}
+      className={`flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${location.pathname !== "/" ? "bg-[#46b9ea]" : "bg-[#46b9ea]"
+        } transition-all duration-200`}
     >
       <div className="flex w-11/12 max-w-maxContent items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex flex-row items-center gap-2">
+        <Link to="/" className="flex justify-center items-center ">
           <img
             src={logo}
             alt="Logo"
-            width={50}
-            height={50}
+            width={150}
+            height={100}
             loading="lazy"
             className="rounded-full"
           />
-          <p className="font-bold text-white">MED360</p>
+          {/* <p className="font-bold text-white">MED360</p> */}
         </Link>
         {/* Navigation links */}
         <nav className="hidden md:block">
@@ -85,11 +84,10 @@ function Navbar() {
                 {link.title === "Catalog" ? (
                   <>
                     <div
-                      className={`group relative flex cursor-pointer items-center gap-1 ${
-                        matchRoute("/catalog/:catalogName")
+                      className={`group relative flex cursor-pointer items-center gap-1 ${matchRoute("/catalog/:catalogName")
                           ? "text-white"
                           : "text-black"
-                      }`}
+                        }`}
                     >
                       <p>{link.title}</p>
                       <BsChevronDown />
@@ -125,9 +123,8 @@ function Navbar() {
                 ) : (
                   <Link to={link?.path}>
                     <p
-                      className={`${
-                        matchRoute(link?.path) ? "text-white" : "text-black"
-                      }`}
+                      className={`${matchRoute(link?.path) ? "text-white" : "text-black"
+                        }`}
                     >
                       {link.title}
                     </p>
