@@ -2,9 +2,9 @@ import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 
-import { fetchInstructorCourses } from "../../../services/operations/courseDetailsAPI"
-import { getInstructorData } from "../../../services/operations/profileAPI"
-import InstructorChart from "./InstructorDashboard/InstructorChart"
+import { fetchInstructorCourses } from "../../../../services/operations/courseDetailsAPI"
+import { getInstructorData } from "../../../../services/operations/profileAPI"
+import InstructorChart from "./InstructorChart"
 
 export default function DoctorDashboard() {
   const { token } = useSelector((state) => state.auth)
@@ -50,9 +50,10 @@ export default function DoctorDashboard() {
       {loading ? (
         <div className="spinner"></div>
       ) : courses.length > 0 ? (
-        <div>
+        {
+          /* <div>
           <div className="my-4 flex h-[450px] space-x-4">
-            {/* Render chart / graph */}
+            
             {totalAmount > 0 || totalStudents > 0 ? (
               <InstructorChart courses={instructorData} />
             ) : (
@@ -63,7 +64,7 @@ export default function DoctorDashboard() {
                 </p>
               </div>
             )}
-            {/* Total Statistics */}
+           
             <div className="flex min-w-[250px] flex-col rounded-md bg-richblack-800 p-6">
               <p className="text-lg font-bold text-richblack-5">Statistics</p>
               <div className="mt-4 space-y-4">
@@ -89,7 +90,6 @@ export default function DoctorDashboard() {
             </div>
           </div>
           <div className="rounded-md bg-richblack-800 p-6">
-            {/* Render 3 courses */}
             <div className="flex items-center justify-between">
               <p className="text-lg font-bold text-richblack-5">Your Courses</p>
               <Link to="/dashboard/my-courses">
@@ -124,9 +124,10 @@ export default function DoctorDashboard() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */
+        }
       ) : (
-        <div className="mt-20 rounded-md bg-richblack-800 p-6 py-20">
+        <div className="mt-20 rounded-md  p-6 py-20">
           <p className="text-center text-2xl font-bold text-richblack-5">
             You have not created any publishments
           </p>
