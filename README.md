@@ -6,7 +6,11 @@
 The Med360 is a online consultant plartform . Where both doctor and patient can register themselves as a patient and as a doctor. Doctor can manage their appoinment from separate section.
 
 ## DEMO VIDEO
-[Yotube link](https://www.youtube.com/watch?v=GH6hKpTKpqE)
+[Yotube link](https://www.youtube.com/watch?v=GH6hKpTKpqE)<br>
+[Frontend Code](https://github.com/Niladri2003/Interhacktive_frontend)<br>
+[Backend Code](https://github.com/Niladri2003/Backend-__-)<br>
+
+
 
 ## For Patient--
 1) THEY CAN REGISTER THEMSELVES AND BOOK THEIR APPOINMENT WITH APPROPIATE DOCTOR
@@ -19,9 +23,9 @@ The Med360 is a online consultant plartform . Where both doctor and patient can 
 
 
 ## Technologies Used
-Programming Languages: [NODE JS , EXPRESS JS , JAVASCRIPT]
-Database Management: [FIREBASE , MONGO DB]
-Frameworks and Libraries: [TAILWIND , REACT ]
+Programming Languages: [NODE JS , EXPRESS JS , JAVASCRIPT]<br>
+Database Management: [FIREBASE , MONGO DB]<br>
+Frameworks and Libraries: [TAILWIND , REACT ]<br>
 Other Tools: [CLOUDINARY, Git, Google Cloud , NODE MAILER ,POSTMAN]
 
 ## Installation and Setup
