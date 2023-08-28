@@ -39,16 +39,14 @@ function Home() {
 
         {/* Heading */}
         <div className="text-center text-4xl font-semibold">
-          Empower Your Future with
-          <HighlightText text={"Coding Skills"} />
+          Your New Smile
+          
+          <HighlightText text={"Starts From Here"} />
         </div>
 
         {/* Sub Heading */}
         <div className="-mt-3 w-[90%] text-center text-lg font-bold text-richblack-300">
-          With our online coding courses, you can learn at your own pace, from
-          anywhere in the world, and get access to a wealth of resources,
-          including hands-on projects, quizzes, and personalized feedback from
-          instructors.
+        Your journey to a healthier smile begins right here. With our online doctor consultation app, you can access expert advice and personalized care from the comfort of your home.Take the first step towards a brighter, healthier you by connecting with experienced doctors through our user-friendly online platform.
         </div>
 
         {/* CTA Buttons */}
@@ -95,7 +93,7 @@ function Home() {
               link: "/signup",
               active: false,
             }}
-            
+
             image1={hero_img}
 
           />
@@ -126,10 +124,10 @@ function Home() {
             }}
 
             image2={hero_img2}
-            
-            // codeColor={"text-white"}
-            // codeblock={`import React from "react";\n import CTAButton from "./Button";\nimport TypeAnimation from "react-type";\nimport { FaArrowRight } from "react-icons/fa";\n\nconst Home = () => {\nreturn (\n<div>Home</div>\n)\n}\nexport default Home;`}
-            // backgroundGradient={<div className="codeblock2 absolute"></div>}
+
+          // codeColor={"text-white"}
+          // codeblock={`import React from "react";\n import CTAButton from "./Button";\nimport TypeAnimation from "react-type";\nimport { FaArrowRight } from "react-icons/fa";\n\nconst Home = () => {\nreturn (\n<div>Home</div>\n)\n}\nexport default Home;`}
+          // backgroundGradient={<div className="codeblock2 absolute"></div>}
 
 
           />
@@ -163,8 +161,9 @@ function Home() {
           {/* Job that is in Demand - Section 1 */}
           <div className="mb-10 mt-[-100px] flex flex-col justify-between gap-7 lg:mt-20 lg:flex-row lg:gap-0">
             <div className="text-4xl font-semibold lg:w-[45%] ">
-              Get the skills you need for a{" "}
-              <HighlightText text={"job that is in demand."} />
+              Steps to be followed to {" "}
+              <br/>
+              <HighlightText text={" sign up "} />
             </div>
             <div className="flex flex-col items-start gap-10 lg:w-[40%]">
               <div className="text-[16px]">

@@ -8,22 +8,22 @@ import Logo4 from "../../../assets/TimeLineLogo/Logo4.svg";
 const TimeLine = [
     {
       Logo: Logo1,
-      Heading: "Leadership",
-      Description: "Fully committed to the success company",
+      Heading: "Visit our website",
+      Description: "Open it on mobile , laptop etc",
     },
     {
       Logo: Logo2,
-      Heading: "Responsibility",
-      Description: "Students will always be our top priority",
+      Heading: "select what you are",
+      Description: "Toggle between Patient and Doctor",
     },
     {
       Logo: Logo3,
-      Heading: "Flexibility",
+      Heading: "Fill the signup form",
       Description: "The ability to switch is an important skills",
     },
     {
       Logo: Logo4,
-      Heading: "Solve the problem",
+      Heading: "Click on Sign Up ",
       Description: "Code your way to a solution",
     },
   ];
