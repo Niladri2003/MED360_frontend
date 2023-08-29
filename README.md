@@ -1,54 +1,70 @@
-![logo](https://github.com/Niladri2003/Interhacktive_frontend/assets/109953155/2c3bfc16-3cf4-42c0-907e-f3145caabb1b)
+<p align="center">
+  <img src="https://github.com/Niladri2003/Interhacktive_frontend/assets/109953155/2c3bfc16-3cf4-42c0-907e-f3145caabb1b" alt="Logo">
+</p>
+
 # MED360
 
-
 ## Project Overview
-The Med360 is a online consultant plartform . Where both doctor and patient can register themselves as a patient and as a doctor. Doctor can manage their appoinment from separate section.
+Med360 is an online consultation platform where both doctors and patients can register. Doctors can manage appointments from a separate section.
 
-## DEMO VIDEO
-[Yotube link](https://www.youtube.com/watch?v=GH6hKpTKpqE)<br>
-[Frontend Code](https://github.com/Niladri2003/Interhacktive_frontend)<br>
-[Backend Code](https://github.com/Niladri2003/Backend-__-)<br>
+## Demo Video
+[![Watch the Demo Video](https://img.youtube.com/vi/GH6hKpTKpqE/0.jpg)](https://www.youtube.com/watch?v=GH6hKpTKpqE)
+- [Frontend Code](https://github.com/Niladri2003/Interhacktive_frontend)
+- [Backend Code](https://github.com/Niladri2003/Backend-__-)
 
+## Latest Deployment
+We deployed the app using Docker on Google Cloud Run. Visit the [Website](https://med-n4ix5hnjea-el.a.run.app/)
 
+## Features
 
-## For Patient--
-1) THEY CAN REGISTER THEMSELVES AND BOOK THEIR APPOINMENT WITH APPROPIATE DOCTOR
-2) tHEY CAN UPLOAD THEIR TEST REPORT AND CAN ACCESS FROM ANYWHERE FROM THE WORLD
-3) THEY CAN ACCESS HIGH QUALITY BLOGES CONTENT AND SHARE THEIR CONTENT GIVEN BY THE DOCTOR
+### For Patients
+- Register and book appointments with doctors
+- Upload test reports accessible from anywhere
+- Access high-quality blog content from doctors
 
-# FOR Doctor
-1) As like patient they can also register themselves
-2) Publish themselves with their valuable deegree and experience to attract attention
-
+### For Doctors
+- Register and showcase degrees and experience
+- Interact with patients' health records
 
 ## Technologies Used
-Programming Languages: [NODE JS , EXPRESS JS , JAVASCRIPT]<br>
-Database Management: [FIREBASE , MONGO DB]<br>
-Frameworks and Libraries: [TAILWIND , REACT ]<br>
-Other Tools: [CLOUDINARY, Git, Google Cloud , NODE MAILER ,POSTMAN]
+- **Programming Languages:** 
+  - <img src="https://lh3.googleusercontent.com/csXm00pBuJvmhsXcI1XauxFGrE66sHBbWI9QyKY0lt2h55a1VaKl6F5TrlH0wBC_aijloKw9lh8a=e14-rj-sc0xffffff-w1270" width="29"> Node.js
+  - <img src="https://expressjs.com/images/favicon.png" width="16"> Express.js
+  - <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="16"> JavaScript
+- **Database Management:** 
+  - <img src="https://firebase.google.com/favicon.ico" width="16"> Firebase
+  - <img src="https://www.mongodb.com/assets/images/global/favicon.ico" width="16"> MongoDB
+- **Frameworks and Libraries:** 
+  - <img src="https://www.devonblog.com/wp-content/uploads/2022/06/tailwind-thumb.jpg" width="28"> Tailwind CSS
+  - <img src="https://reactjs.org/favicon.ico" width="25"> React
+- **Other Tools:** 
+  - <img src="https://cloudinary.com/favicon.ico" width="25"> Cloudinary
+  - <img src="https://git-scm.com/favicon.ico" width="25"> Git
+  - <img src="https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png" width="35"> Google Cloud
+  - <img src="https://nodemailer.com/nm_logo_200x136.png" width="25"> Node Mailer
+  - <img src="https://res.cloudinary.com/postman/image/upload/t_team_logo/v1629869194/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8" width="16"> Postman
 
 ## Installation and Setup
-1> Clone the repository: 
-git clone https://github.com/Niladri2003/Interhacktive_frontend-
-2> Navigate to the project directory: 
-cd MED360-system
+1. Clone the repository: `git clone https://github.com/Niladri2003/Interhacktive_frontend-`
+2. Navigate to the project directory: `cd MED360-system`
 
-## FUTURE ASPECT (IDEAS THAT LEFT BEHIND FOR TIME)
-1) We will implement "Zegocloud" for smooth video with voice calling conversation
-2) We will integrate The payment collecting method by "Razorpay"
-3) Appoinment creation and health record uploading(all-most done) 
+## Future Aspects
+1. Implement smooth video and voice calling with "Zegocloud"
+2. Integrate payment collection using "Razorpay"
+3. Complete appointment creation and health record uploading
 
 ## Contributing
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "improvement". Don't forget to star this project!!
+Have suggestions to make this better? Fork the repo and create a pull request or open an issue with the "improvement" tag. Don't forget to star the project!
 
-Fork the Project
-Create your Feature Branch (git checkout -b feature/Feature1)
-Commit your Changes (git commit -m 'Add Feature 1')
-Push to the Branch (git push origin feature/Feature1)
-Open a Pull Request
+- Fork the project
+- Create your feature branch: `git checkout -b feature/Feature1`
+- Commit your changes: `git commit -m 'Add Feature 1'`
+- Push to the branch: `git push origin feature/Feature1`
+- Open a pull request
 
 ## Contributors
-[@Niladri2003](https://github.com/Niladri2003)
-[@arnabpal15](https://github.com/arnabpal16)
-[@swarnab](https://github.com/swarnab007)
+<p align="center">
+  <a href="https://github.com/Niladri2003"><img src="https://github.com/Niladri2003.png" width="80" alt="Niladri" style="border-radius: 50%;"></a>
+  <a href="https://github.com/arnabpal16"><img src="https://github.com/arnabpal16.png" width="80" alt="Arnab" style="border-radius: 50%;"></a>
+  <a href="https://github.com/swarnab007"><img src="https://github.com/swarnab007.png" width="80" alt="Swarnab" style="border-radius: 50%;"></a>
+</p>
