@@ -11,25 +11,6 @@ import { categories } from "../../services/apis"
 import { ACCOUNT_TYPE } from "../../utils/constants"
 import ProfileDropdown from "../core/Auth/ProfileDropdown"
 
-// const subLinks = [
-//   {
-//     title: "Python",
-//     link: "/catalog/python",
-//   },
-//   {
-//     title: "javascript",
-//     link: "/catalog/javascript",
-//   },
-//   {
-//     title: "web-development",
-//     link: "/catalog/web-development",
-//   },
-//   {
-//     title: "Android Development",
-//     link: "/catalog/Android Development",
-//   },
-// ];
-
 function Navbar() {
   const { token } = useSelector((state) => state.auth)
   const { user } = useSelector((state) => state.profile)
@@ -40,7 +21,7 @@ function Navbar() {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    ; (async () => {
+    ;(async () => {
       setLoading(true)
       try {
         const res = await apiConnector("GET", categories.CATEGORIES_API)
@@ -60,12 +41,13 @@ function Navbar() {
 
   return (
     <div
-      className={`flex h-16 items-center justify-center border-b-[1px] border-b-richblack-700 ${location.pathname !== "/" ? "bg-[#46b9ea]" : "bg-[#46b9ea]"
-        } transition-all duration-200`}
+      className={`flex h-16 items-center justify-center border-b-[1px] border-b-richblack-700 ${
+        location.pathname !== "/" ? "bg-[#46b9ea]" : "bg-[#46b9ea]"
+      } transition-all duration-200`}
     >
       <div className="flex w-11/12 max-w-maxContent items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex justify-center items-center ">
+        <Link to="/" className="flex items-center justify-center ">
           <img
             src={logo}
             alt="Logo"
@@ -84,10 +66,11 @@ function Navbar() {
                 {link.title === "Catalog" ? (
                   <>
                     <div
-                      className={`group relative flex cursor-pointer items-center gap-1 ${matchRoute("/catalog/:catalogName")
+                      className={`group relative flex cursor-pointer items-center gap-1 ${
+                        matchRoute("/catalog/:catalogName")
                           ? "text-white"
                           : "text-black"
-                        }`}
+                      }`}
                     >
                       <p>{link.title}</p>
                       <BsChevronDown />
@@ -115,7 +98,7 @@ function Navbar() {
                               ))}
                           </>
                         ) : (
-                          <p className="text-center">No Courses Found</p>
+                          <p className="text-center">No Doctors Found</p>
                         )}
                       </div>
                     </div>
@@ -123,8 +106,9 @@ function Navbar() {
                 ) : (
                   <Link to={link?.path}>
                     <p
-                      className={`${matchRoute(link?.path) ? "text-white" : "text-black"
-                        }`}
+                      className={`${
+                        matchRoute(link?.path) ? "text-white" : "text-black"
+                      }`}
                     >
                       {link.title}
                     </p>

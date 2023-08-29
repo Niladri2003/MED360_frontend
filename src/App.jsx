@@ -11,7 +11,7 @@ import BlogPage from "./components/Blogs/BlogPage"
 import Navbar from "./components/Common/Navbar"
 import OpenRoute from "./components/core/Auth/OpenRoute"
 import PrivateRoute from "./components/core/Auth/PrivateRoute"
-import AddCourse from "./components/core/Dashboard/AddCourse"
+import AddPublisment from "./components/core/Dashboard/AddCourse"
 import ApointmentDoc from "./components/core/Dashboard/DoctorDashboard/ApointmentDoc"
 import DoctorDashboard from "./components/core/Dashboard/DoctorDashboard/DoctorDashboard"
 import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses"
@@ -127,7 +127,7 @@ function App() {
               />
               <Route
                 path="dashboard/publish-yourself"
-                element={<AddCourse />}
+                element={<AddPublisment />}
               />
               <Route
                 path="dashboard/appointments-doc"

@@ -28,6 +28,8 @@ export default function DoctorInformationForm() {
   const { course, editCourse } = useSelector((state) => state.course)
   const [loading, setLoading] = useState(false)
   const [courseCategories, setCourseCategories] = useState([])
+  const [selectedImage, setSelectedImage] = useState(null)
+  const [imagePreview, setImagePreview] = useState(null)
 
   useEffect(() => {
     const getCategories = async () => {
@@ -44,23 +46,25 @@ export default function DoctorInformationForm() {
 
   //   handle next button click
   const onSubmit = async (data) => {
-    console.log(data)
-    console.log("HEllo")
+    try {
+      console.log(selectedImage)
+      console.log("HEllo")
 
-    const formData = new FormData()
-    formData.append("Docpublicname", data.publicname)
-    formData.append("DocDescription", data.DoctorDesc)
-    formData.append("price", data.AptPrice)
-    formData.append("DocRegno", data.Regno)
-    formData.append("category", data.DocCategory)
-    formData.append("ClinicAddress", data.Address)
-    // formData.append("thumbnailImage", data.courseImage)
-    formData.append("Education", data.Education)
-    formData.append("Language", data.Language)
-    setLoading(true)
-    const result = await addCourseDetails(formData, token)
+      const formData = new FormData()
+      formData.append("thumbnail", selectedImage)
+      formData.append("Docpublicname", data.publicname)
+      formData.append("DocDescription", data.DoctorDesc)
+      formData.append("price", data.AptPrice)
+      formData.append("DocRegno", data.Regno)
+      formData.append("category", data.DocCategory)
+      formData.append("ClinicAddress", data.Address)
+      formData.append("Education", data.Education)
+      formData.append("Language", data.Language)
 
-    setLoading(false)
+      console.log("FormData:", formData)
+    } catch (e) {
+      console.log("ERROR MESSAGE - ", e.message)
+    }
   }
 
   return (
@@ -68,13 +72,26 @@ export default function DoctorInformationForm() {
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-8 rounded-md border-[1px] border-white  p-6"
     >
-      {/* <Upload
-        name="Image"
-        label="Upload your image"
-        register={register}
-        setValue={setValue}
-        errors={errors}
-      /> */}
+      <label className="text-sm text-richblack-5" htmlFor="imageUpload">
+        Upload Your Image <sup className="text-pink-200">*</sup>
+      </label>
+      <input
+        type="file"
+        accept="image/png, image/gif, image/jpeg"
+        id="imageUpload"
+        onChange={(e) => {
+          const file = e.target.files[0]
+          setSelectedImage(file)
+          setImagePreview(URL.createObjectURL(file)) // Create a preview URL
+        }}
+        className="form-style w-full border-b-4 "
+        style={{ backgroundColor: "#b4e7ed", color: "black" }}
+      />
+      {/* Image preview */}
+      {imagePreview && (
+        <img src={imagePreview} alt="Preview" className="mt-2 max-h-36" />
+      )}
+
       {/* Display Name */}
       <div className="flex flex-col space-y-2">
         <label className="text-sm text-richblack-5" htmlFor="publicname">

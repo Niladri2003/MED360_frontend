@@ -11,10 +11,7 @@ import { RiDeleteBin6Line } from "react-icons/ri"
 import { useNavigate } from "react-router-dom"
 
 import { formatDate } from "../../../../services/formatDate"
-import {
-  deleteCourse,
-  fetchInstructorCourses,
-} from "../../../../services/operations/doctorDetailsAPI"
+import { fetchInstructorCourses } from "../../../../services/operations/doctorDetailsAPI"
 import ConfirmationModal from "../../../Common/ConfirmationModal"
 
 export default function PublishTable({ courses, setCourses }) {
@@ -24,17 +21,6 @@ export default function PublishTable({ courses, setCourses }) {
   const [loading, setLoading] = useState(false)
   const [confirmationModal, setConfirmationModal] = useState(null)
   const TRUNCATE_LENGTH = 30
-
-  const handleCourseDelete = async (courseId) => {
-    setLoading(true)
-    await deleteCourse({ courseId: courseId }, token)
-    const result = await fetchInstructorCourses(token)
-    if (result) {
-      setCourses(result)
-    }
-    setConfirmationModal(null)
-    setLoading(false)
-  }
 
   // console.log("All Course ", courses)
 
@@ -127,21 +113,7 @@ export default function PublishTable({ courses, setCourses }) {
                   </button>
                   <button
                     disabled={loading}
-                    onClick={() => {
-                      setConfirmationModal({
-                        text1: "Do you want to delete this course?",
-                        text2:
-                          "All the data related to this course will be deleted",
-                        btn1Text: !loading ? "Delete" : "Loading...  ",
-                        btn2Text: "Cancel",
-                        btn1Handler: !loading
-                          ? () => handleCourseDelete(course._id)
-                          : () => {},
-                        btn2Handler: !loading
-                          ? () => setConfirmationModal(null)
-                          : () => {},
-                      })
-                    }}
+                    onClick={() => {}}
                     title="Delete"
                     className="px-1 transition-all duration-200 hover:scale-110 hover:text-[#ff0000]"
                   >

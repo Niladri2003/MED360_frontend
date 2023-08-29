@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.12e2778a.css",
-    "main.js": "/static/js/main.b6a466db.js",
+    "main.css": "/static/css/main.9e1a6ea2.css",
+    "main.js": "/static/js/main.054c57e6.js",
     "static/media/slide_4.jpg": "/static/media/slide_4.4b7f8973b2c7193388ca.jpg",
     "static/media/banner.mp4": "/static/media/banner.8e687823b1422880cc3f.mp4",
+    "static/media/hero_gif.gif": "/static/media/hero_gif.6a092c7f6d370a3eb669.gif",
     "static/media/slider_3.jpg": "/static/media/slider_3.b20187df04bf70f86ffa.jpg",
     "static/media/slider_2.jpg": "/static/media/slider_2.519cd6888fe1a35047cd.jpg",
-    "static/media/TimelineImage.png": "/static/media/TimelineImage.a610b1e5d891ac77fe93.png",
     "static/media/Instructor.png": "/static/media/Instructor.8b4c4f204053f0dfe844.png",
     "static/media/About_1.jpg": "/static/media/About_1.106c00d0d5fd7489fbe1.jpg",
     "static/media/Plan_your_lessons.svg": "/static/media/Plan_your_lessons.f123ccf442a2a364a459a7bbec807045.svg",
@@ -20,17 +20,21 @@
     "static/media/Know_your_progress.png": "/static/media/Know_your_progress.cf3ea1c51544985430d3.png",
     "static/media/frame.png": "/static/media/frame.3a238e5f26d676376e1d.png",
     "static/media/signup.webp": "/static/media/signup.acaf50bcb11d9aec44b4.webp",
+    "static/media/hero_gif2.gif": "/static/media/hero_gif2.42a6aa933c0d83e1f337.gif",
     "static/media/login.webp": "/static/media/login.5eeb0b81544a40330d4b.webp",
-    "static/media/Logo2.svg": "/static/media/Logo2.2d9e85de9e756cda89ffc4582338c939.svg",
-    "static/media/Logo1.svg": "/static/media/Logo1.73daf51e41d665299fc682bc3cb53878.svg",
-    "static/media/Logo3.svg": "/static/media/Logo3.0a56f78fead602f0d54c55ddcdf7e616.svg",
-    "static/media/Logo4.svg": "/static/media/Logo4.5da4c6e0c53e6745b25529891ef82458.svg",
+    "static/media/figma.svg": "/static/media/figma.a4f85e5d7cb2a3dd1e0980410828cce6.svg",
+    "static/media/fees.svg": "/static/media/fees.3d56ddf503c0eb12074a2169d0bc57b8.svg",
     "index.html": "/index.html",
-    "main.12e2778a.css.map": "/static/css/main.12e2778a.css.map",
-    "main.b6a466db.js.map": "/static/js/main.b6a466db.js.map"
+    "static/media/help.svg": "/static/media/help.936435947b5b3506a94153fa831d6b3b.svg",
+    "static/media/pdf.svg": "/static/media/pdf.7b8dd1354f8a7d7d1345686737437132.svg",
+    "static/media/signup.svg": "/static/media/signup.23d5679a3d1a952d058eb4fd828c0cce.svg",
+    "static/media/emergency.svg": "/static/media/emergency.a8aa811ee7a75153a8c56caa5eebd23a.svg",
+    "static/media/video.svg": "/static/media/video.18335f56e0324bbb629c9dafe68b282a.svg",
+    "main.9e1a6ea2.css.map": "/static/css/main.9e1a6ea2.css.map",
+    "main.054c57e6.js.map": "/static/js/main.054c57e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.12e2778a.css",
-    "static/js/main.b6a466db.js"
+    "static/css/main.9e1a6ea2.css",
+    "static/js/main.054c57e6.js"
   ]
 }

@@ -1,33 +1,12 @@
 import React, { useState } from "react"
 
-// import Box from '@mui/material/Box';
-// import Modal from '@mui/material/Modal';
-// import Button from '@mui/material/Button';
-
-// const style = {
-//     position: 'absolute',
-//     top: '50%',
-//     left: '50%',
-//     transform: 'translate(-50%, -50%)',
-//     width: 400,
-//     bgcolor: 'background.paper',
-//     border: '2px solid #000',
-//     boxShadow: 24,
-//     pt: 2,
-//     px: 4,
-//     pb: 3,
-//   };
-
-const Doccard = ({ doctor }) => {
-  // const [confirmationModal, setConfirmationModal] = useState(null)
-  console.log(doctor)
-
+const Doccard = ({ doctor, img }) => {
   return (
     <div className="">
       <div className=" flex transform flex-col items-center rounded-md bg-white  p-4 transition duration-500 hover:scale-110">
         <div>
           <img
-            src="https://www.clipartmax.com/png/middle/119-1196258_toonarific-clipart-gallery-woman-silhouette-question-mark.png"
+            src={`${img}`}
             alt="photo user"
             className=" h-24 rounded-full border-4	border-yellow-100 "
           ></img>
