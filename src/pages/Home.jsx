@@ -17,7 +17,6 @@ function Home() {
       <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 text-white">
         <p className="mt-8 text-2xl font-bold">Trending section</p>
         <div className="h-[1px] w-full bg-white"></div>
-        <HomeCardGroup />
 
         {/* Heading */}
         <div className="text-center text-4xl font-semibold">
