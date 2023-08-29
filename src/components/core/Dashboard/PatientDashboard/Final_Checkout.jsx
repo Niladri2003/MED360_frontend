@@ -1,129 +1,151 @@
-import React from 'react'
+import React from "react"
+
 import profile from "../../../../assets/Images/Instructor.png"
-const Final_Checkout = () => {
-    return (
-        <div>
-            {/* <div class="bg-white p-3 border-t-4 border-green-400">
-                    <div class="image overflow-hidden">
-                        <img class="h-auto w-full mx-auto"
-                            src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
-                            alt=""/>
+
+const Final_Checkout = ({ doctorDetails }) => {
+  return (
+    <div>
+      <div class="container mx-auto my-1 p-5">
+        <div class="no-wrap md:-mx-2 md:flex ">
+          <div class="w-full md:mx-2 md:w-3/12">
+            <div class="border-green-400 border-t-4 bg-white p-3">
+              <div class="image overflow-hidden ">
+                <img
+                  className="mx-auto h-[200px] w-[200px] rounded-full"
+                  src={`${doctorDetails.Doctor.image}`}
+                  alt=""
+                />
+              </div>
+              <h1 class="text-gray-900 my-1 text-center text-xl font-bold leading-8 text-black">
+                Dr. {`${doctorDetails.Docpublicname}`}
+              </h1>
+              <h3 class="text-gray-600 font-sm text-semibold mb-2 text-center leading-6 text-richblack-300">
+                {`${doctorDetails.Education}`}
+              </h3>
+              <p class="text-gray-500 hover:text-gray-600 mb-2 text-center  text-sm leading-6  text-black  ">
+                {`${doctorDetails.DocDescription}`}
+              </p>
+              <ul class="bg-gray-100 text-gray-600 hover:text-gray-700 mt-3 divide-y rounded px-3 py-2 shadow-sm hover:shadow">
+                <li class="flex items-center py-3 text-black">
+                  <span className="text-black">Status</span>
+                  <span class="ml-auto">
+                    <span class="rounded bg-caribbeangreen-200 px-2 py-1 text-sm text-white">
+                      {`${doctorDetails.Doctor.active}`}
+                    </span>
+                  </span>
+                </li>
+                <li class="flex items-center py-3 ">
+                  <span className="text-black">Member since</span>
+                  <span class="ml-auto text-xs text-black">{`${doctorDetails.createdAt}`}</span>
+                </li>
+              </ul>
+            </div>
+            <div class="my-4"></div>
+          </div>
+          <div class="mx-2 h-64 w-full md:w-9/12">
+            <div class="rounded-sm bg-white p-3 shadow-sm">
+              <div class="text-gray-900 flex items-center space-x-2 font-semibold leading-8">
+                <span clas="text-green-500">
+                  <svg
+                    class="h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                </span>
+                <span class="tracking-wide">About</span>
+              </div>
+              <div class="text-gray-700">
+                <div class="grid text-sm md:grid-cols-2 ">
+                  <div class="grid grid-cols-2 border-richblack-800">
+                    <div class="border-richblack-800 px-4 py-2 font-semibold text-black ">
+                      First Name
                     </div>
-                    <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">Jane Doe</h1>
-                    <h3 class="text-gray-600 font-lg text-semibold leading-6">Owner at Her Company Inc.</h3>
-                    <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit.
-                        Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt</p>
-                    <ul
-                        class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
-                        <li class="flex items-center py-3">
-                            <span>Status</span>
-                            <span class="ml-auto"><span
-                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span>
-                        </li>
-                        <li class="flex items-center py-3">
-                            <span>Member since</span>
-                            <span class="ml-auto">Nov 07, 2016</span>
-                        </li>
-                    </ul>
-                </div> */}
-
-            <div class="container mx-auto my-1 p-5">
-                <div class="md:flex no-wrap md:-mx-2 ">
-                    <div class="w-full md:w-3/12 md:mx-2">
-
-                        <div class="bg-white p-3 border-t-4 border-green-400">
-                            <div class="image overflow-hidden ">
-                                <img className="h-[200px] w-[200px] mx-auto rounded-full"
-                                    src={profile}
-                                    alt="" />
-                            </div>
-                            <h1 class="text-gray-900 font-bold text-xl leading-8 my-1 text-black text-center">Dr. Niladri Adak</h1>
-                            <h3 class="text-gray-600 font-sm text-semibold leading-6 text-richblack-300 text-center mb-2">MBBS|WBHUS|SURGEIN|MD</h3>
-                            <p class="text-sm text-gray-500 hover:text-gray-600 leading-6  text-black text-center  mb-2  ">Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit.
-                                Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt</p>
-                            <ul
-                                class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
-                                <li class="flex items-center py-3 text-black">
-                                    <span className='text-black'>Status</span>
-                                    <span class="ml-auto"><span
-                                        class="bg-caribbeangreen-200 py-1 px-2 rounded text-white text-sm">Active</span></span>
-                                </li>
-                                <li class="flex items-center py-3 ">
-                                    <span className='text-black'>Member since</span>
-                                    <span class="ml-auto text-black">Nov 07, 2016</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="my-4"></div>
-
+                    <div class="px-4 py-2 text-richblack-400">{`${doctorDetails.Doctor.firstName}`}</div>
+                  </div>
+                  <div class="grid grid-cols-2">
+                    <div class="px-4 py-2 font-semibold text-black">
+                      Last Name
                     </div>
-                    <div class="w-full md:w-9/12 mx-2 h-64">
-                        <div class="bg-white p-3 shadow-sm rounded-sm">
-                            <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
-                                <span clas="text-green-500">
-                                    <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
-                                </span>
-                                <span class="tracking-wide">About</span>
-                            </div>
-                            <div class="text-gray-700">
-                                <div class="grid md:grid-cols-2 text-sm ">
-                                    <div class="grid grid-cols-2 border-richblack-800">
-                                        <div class="px-4 py-2 font-semibold text-black border-richblack-800 ">First Name</div>
-                                        <div class="px-4 py-2 text-richblack-400">Arnab</div>
-                                    </div>
-                                    <div class="grid grid-cols-2">
-                                        <div class="px-4 py-2 font-semibold text-black">Last Name</div>
-                                        <div class="px-4 py-2 text-richblack-400">Pal</div>
-                                    </div>
-                                    <div class="grid grid-cols-2">
-                                        <div class="px-4 py-2 font-semibold text-black">Gender</div>
-                                        <div class="px-4 py-2 text-richblack-400">Male</div>
-                                    </div>
-                                    <div class="grid grid-cols-2">
-                                        <div class="px-4 py-2 font-semibold text-black">Contact No.</div>
-                                        <div class="px-4 py-2 text-richblack-400">+91 998001001</div>
-                                    </div>
-                                    <div class="grid grid-cols-2">
-                                        <div class="px-4 py-2 font-semibold text-black">Current Address</div>
-                                        <div class="px-4 py-2 text-richblack-400">Beech Creek, PA, Pennsylvania</div>
-                                    </div>
-                                    <div class="grid grid-cols-2">
-                                        <div class="px-4 py-2 font-semibold text-black">Permanant Address</div>
-                                        <div class="px-4 py-2 text-richblack-400">Arlington Heights, IL, Illinois</div>
-                                    </div>
-                                    <div class="grid grid-cols-2">
-                                        <div class="px-4 py-2 font-semibold text-black">Email.</div>
-                                        <div class="px-4 py-2">
-                                            <a class="text-blue-800" href="mailto:jane@example.com text-richblack-400">arnab.pal.34@gmail.com</a>
-                                        </div>
-                                    </div>
-                                    <div class="grid grid-cols-2">
-                                        <div class="px-4 py-2 font-semibold text-black">Birthday</div>
-                                        <div class="px-4 py-2 text-richblack-400">Feb 06, 1998</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button
-                                type="button"
-                                class="px-10 py-3 bg-blue-600 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform mx-5 flex my-2  "
-                            >
-                                {/* <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="px-4 py-2 text-richblack-400">{`${doctorDetails.Doctor.lastName}`}</div>
+                  </div>
+                  <div class="grid grid-cols-2">
+                    <div class="px-4 py-2 font-semibold text-black">Gender</div>
+                    <div class="px-4 py-2 text-richblack-400">
+                      {doctorDetails.Doctor.additionalDetails.gender}
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2">
+                    <div class="px-4 py-2 font-semibold text-black">
+                      Contact No.
+                    </div>
+                    <div class="px-4 py-2 text-richblack-400">
+                      {doctorDetails.Doctor.additionalDetails.contactNumber}
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2">
+                    <div class="px-4 py-2 font-semibold text-black">
+                      Current Address
+                    </div>
+                    <div class="px-4 py-2 text-richblack-400">
+                      Beech Creek, PA, Pennsylvania
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2">
+                    <div class="px-4 py-2 font-semibold text-black">
+                      Permanant Address
+                    </div>
+                    <div class="px-4 py-2 text-richblack-400">
+                      {doctorDetails.Doctor.email}
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2">
+                    <div class="px-4 py-2 font-semibold text-black">Email.</div>
+                    <div class="px-4 py-2">
+                      <a
+                        class="text-blue-800"
+                        href="mailto:jane@example.com text-richblack-400"
+                      >
+                        {doctorDetails.Doctor.email}
+                      </a>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2">
+                    <div class="px-4 py-2 font-semibold text-black">
+                      Birthday
+                    </div>
+                    <div class="px-4 py-2 text-richblack-400">
+                      {" "}
+                      {doctorDetails.Doctor.additionalDetails.dateOfBirth}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="mx-5 my-2 flex transform rounded-md bg-blue-600 px-10 py-3 text-white shadow-lg outline-none transition-transform focus:ring-4 active:scale-x-75  "
+              >
+                {/* <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg> */}
 
-                                <span class="ml-2">Request an Appointment</span>
-                            </button>
-                        </div>
+                <span class="ml-2">
+                  Request an Appointment ₹{`${doctorDetails.price}`}
+                </span>
+              </button>
+            </div>
 
-                        <div class="my-4"></div>
+            <div class="my-4"></div>
 
-                        {/* <div class="bg-white p-3 shadow-sm rounded-sm">
+            {/* <div class="bg-white p-3 shadow-sm rounded-sm">
 
                             <div class="grid grid-cols-2">
                                 <div>
@@ -183,11 +205,11 @@ const Final_Checkout = () => {
                                 </div>
                             </div>
                         </div> */}
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default Final_Checkout

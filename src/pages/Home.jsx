@@ -1,3 +1,6 @@
+import { useEffect } from "react"
+import { useDispatch } from "react-redux"
+
 import hero_img2 from "../assets/Images/hero_gif2.gif"
 import hero_img from "../assets/Images/hero_gif.gif"
 // Component Imports
@@ -8,8 +11,27 @@ import CTAButton from "../components/core/HomePage/Button"
 import CodeBlocks from "../components/core/HomePage/CodeBlocks"
 import HighlightText from "../components/core/HomePage/HighlightText"
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
+import { apiConnector } from "../services/apiConnector"
+import { courseEndpoints } from "../services/apis"
+import { setdoctorData } from "../slices/doctorsSlice"
 
 function Home() {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    const fetchDoctors = async () => {
+      try {
+        const reslt = await apiConnector(
+          "GET",
+          courseEndpoints.GET_ALL_DOCTORS_API
+        )
+        dispatch(setdoctorData(reslt.data.data))
+      } catch (error) {
+        console.log("Could not fetch Doctors.", error)
+      }
+    }
+    fetchDoctors()
+  }, [])
+
   return (
     <div>
       {/* Section 1 */}

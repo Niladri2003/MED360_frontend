@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.9e1a6ea2.css",
-    "main.js": "/static/js/main.054c57e6.js",
+    "main.css": "/static/css/main.049d5586.css",
+    "main.js": "/static/js/main.f1238fe3.js",
     "static/media/slide_4.jpg": "/static/media/slide_4.4b7f8973b2c7193388ca.jpg",
-    "static/media/banner.mp4": "/static/media/banner.8e687823b1422880cc3f.mp4",
     "static/media/hero_gif.gif": "/static/media/hero_gif.6a092c7f6d370a3eb669.gif",
     "static/media/slider_3.jpg": "/static/media/slider_3.b20187df04bf70f86ffa.jpg",
     "static/media/slider_2.jpg": "/static/media/slider_2.519cd6888fe1a35047cd.jpg",
@@ -14,13 +13,13 @@
     "static/media/contact_page_doc.png": "/static/media/contact_page_doc.010e4b12f910e5150a3d.png",
     "static/media/About_3.jpg": "/static/media/About_3.8addb39fd9e8c49dd3e2.jpg",
     "static/media/bghome.svg": "/static/media/bghome.de04eae287ff1d29f0b1.svg",
-    "static/media/rzp_logo.png": "/static/media/rzp_logo.db1cd7db1b52c2ed8e3d.png",
     "static/media/Mission_img.jpg": "/static/media/Mission_img.e60e9ff1ca790c77a8e2.jpg",
     "static/media/About_2.jpg": "/static/media/About_2.942706d830d9b7af113b.jpg",
     "static/media/Know_your_progress.png": "/static/media/Know_your_progress.cf3ea1c51544985430d3.png",
     "static/media/frame.png": "/static/media/frame.3a238e5f26d676376e1d.png",
     "static/media/signup.webp": "/static/media/signup.acaf50bcb11d9aec44b4.webp",
     "static/media/hero_gif2.gif": "/static/media/hero_gif2.42a6aa933c0d83e1f337.gif",
+    "static/media/profile.jpg": "/static/media/profile.5a29179a8259915f5d30.jpg",
     "static/media/login.webp": "/static/media/login.5eeb0b81544a40330d4b.webp",
     "static/media/figma.svg": "/static/media/figma.a4f85e5d7cb2a3dd1e0980410828cce6.svg",
     "static/media/fees.svg": "/static/media/fees.3d56ddf503c0eb12074a2169d0bc57b8.svg",
@@ -30,11 +29,11 @@
     "static/media/signup.svg": "/static/media/signup.23d5679a3d1a952d058eb4fd828c0cce.svg",
     "static/media/emergency.svg": "/static/media/emergency.a8aa811ee7a75153a8c56caa5eebd23a.svg",
     "static/media/video.svg": "/static/media/video.18335f56e0324bbb629c9dafe68b282a.svg",
-    "main.9e1a6ea2.css.map": "/static/css/main.9e1a6ea2.css.map",
-    "main.054c57e6.js.map": "/static/js/main.054c57e6.js.map"
+    "main.049d5586.css.map": "/static/css/main.049d5586.css.map",
+    "main.f1238fe3.js.map": "/static/js/main.f1238fe3.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e1a6ea2.css",
-    "static/js/main.054c57e6.js"
+    "static/css/main.049d5586.css",
+    "static/js/main.f1238fe3.js"
   ]
 }

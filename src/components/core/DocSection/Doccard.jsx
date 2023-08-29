@@ -6,9 +6,9 @@ const Doccard = ({ doctor, img }) => {
       <div className=" flex transform flex-col items-center rounded-md bg-white  p-4 transition duration-500 hover:scale-110">
         <div>
           <img
-            src={`${img}`}
+            src={`${doctor.Doctor !== null && doctor.Doctor.image}`}
             alt="photo user"
-            className=" h-24 rounded-full border-4	border-yellow-100 "
+            className=" ounded-full h-24 w-24 border-[1px] border-black	bg-contain"
           ></img>
         </div>
         <div id="title " className=" mt-4 px-4 text-xl font-bold text-black ">

@@ -10,7 +10,7 @@ const doctorSlice = createSlice({
   initialState: initialState,
   reducers: {
     setdoctorData(state, value) {
-      state.signupData = value.payload
+      state.DoctorData = value.payload
     },
   },
 })

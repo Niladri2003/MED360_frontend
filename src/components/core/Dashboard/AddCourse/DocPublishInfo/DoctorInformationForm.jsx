@@ -46,25 +46,23 @@ export default function DoctorInformationForm() {
 
   //   handle next button click
   const onSubmit = async (data) => {
-    try {
-      console.log(selectedImage)
-      console.log("HEllo")
+    console.log(selectedImage)
+    console.log("HEllo")
 
-      const formData = new FormData()
-      formData.append("thumbnail", selectedImage)
-      formData.append("Docpublicname", data.publicname)
-      formData.append("DocDescription", data.DoctorDesc)
-      formData.append("price", data.AptPrice)
-      formData.append("DocRegno", data.Regno)
-      formData.append("category", data.DocCategory)
-      formData.append("ClinicAddress", data.Address)
-      formData.append("Education", data.Education)
-      formData.append("Language", data.Language)
+    const formData = new FormData()
+    formData.append("thumbnail", selectedImage)
+    formData.append("Docpublicname", data.publicname)
+    formData.append("DocDescription", data.DoctorDesc)
+    formData.append("price", data.AptPrice)
+    formData.append("DocRegno", data.Regno)
+    formData.append("category", data.DocCategory)
+    formData.append("ClinicAddress", data.Address)
+    formData.append("Education", data.Education)
+    formData.append("Language", data.Language)
+    setLoading(true)
+    const result = await addCourseDetails(formData, token)
 
-      console.log("FormData:", formData)
-    } catch (e) {
-      console.log("ERROR MESSAGE - ", e.message)
-    }
+    setLoading(false)
   }
 
   return (

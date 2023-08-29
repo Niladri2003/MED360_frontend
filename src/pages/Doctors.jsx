@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react"
-import { get } from "react-hook-form"
+import { useDispatch, useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 
-// import profile from "../components/core/DocSection/profile"
-import Final_Checkout from "../components/core/Dashboard/PatientDashboard/Final_Checkout"
 import Doccard from "../components/core/DocSection/Doccard"
 import { apiConnector } from "../services/apiConnector"
 import { courseEndpoints } from "../services/apis"
-// import DocShowCard from "../components/core/DocSection/DocShowCard"
 import { getAllDoctors } from "../services/operations/doctorDetailsAPI"
+import { setdoctorData } from "../slices/doctorsSlice"
 
 const Doctors = () => {
+  const dispatch = useDispatch()
   const [doctors, setDoctors] = useState([])
   const [loading, setLoading] = useState(true) // Add loading state
-
+  const DoctorData = useSelector((state) => state.doctor.doctorData)
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
@@ -21,14 +21,14 @@ const Doctors = () => {
           courseEndpoints.GET_ALL_DOCTORS_API
         )
         setDoctors(reslt.data.data)
-        console.log(reslt)
-        setLoading(false) // Set loading to false after fetching
+        dispatch(setdoctorData(reslt.data.data))
+        setLoading(false)
       } catch (error) {
         console.log("Could not fetch Doctors.", error)
-        setLoading(false) // Handle error by setting loading to false
+        setLoading(false)
       }
     }
-
+    dispatch(getAllDoctors)
     fetchDoctors()
   }, [])
 
@@ -40,7 +40,9 @@ const Doctors = () => {
         <div className="grid grid-cols-4 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {doctors.length > 0 ? (
             doctors.map((doctor) => (
-              <Doccard key={doctor.id} doctor={doctor} img={doctor} />
+              <Link key={doctor.id} to={`/doctordetails/${doctor._id}`}>
+                <Doccard doctor={doctor} />
+              </Link>
             ))
           ) : (
             <p>No doctors available</p>
