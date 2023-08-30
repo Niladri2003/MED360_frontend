@@ -1,5 +1,5 @@
 const BASE_URL =
-  "https://studynotin-backend-dot-hospital-backend-396618.el.r.appspot.com/api/v1"
+  "http://localhost:4000/api/v1"
 
 // AUTH ENDPOINTS
 export const endpoints = {
