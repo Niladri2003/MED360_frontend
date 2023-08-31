@@ -6,10 +6,6 @@ const ApointmentDoc = () => {
   return (
     <div className=" my-3 ">
       <Vdo_joinCard />
-      <Vdo_joinCard />
-      <Vdo_joinCard />
-      <Vdo_joinCard />
-      <Vdo_joinCard />
     </div>
   )
 }

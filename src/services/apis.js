@@ -30,6 +30,7 @@ export const courseEndpoints = {
   GET_DOC_FULL_DETAILS: BASE_URL + "/course/getDocDetails",
   COURSE_CATEGORIES_API: BASE_URL + "/course/showAllCategories",
   CREATE_COURSE_API: BASE_URL + "/course/createCourse",
+  GET_ALL_APOINTMENTS: BASE_URL + "/course/getUserAppointments",
 }
 
 // RATINGS AND REVIEWS

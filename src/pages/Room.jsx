@@ -1,36 +1,50 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt"
 import { useParams } from "react-router-dom"
 
 const Room = () => {
-  const { roomid } = useParams()
+  const roomId = "hbsjhv"
+  const meetingContainerRef = useRef(null)
 
-  let myMeeting = async (element) => {
-    console.log("Room id", roomid)
-    // generate Kit Token
-    const appID = 1939137197
-    const serverSecret = "d97fcc8e765805de011213fea2146e20"
-    const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
-      appID,
-      serverSecret,
-      roomid,
-      Date.now().toString,
-      "Niladri"
-    )
-    console.log(kitToken)
+  useEffect(() => {
+    const initVideoCall = async () => {
+      console.log("Room ID:", roomId)
 
-    const zp = ZegoUIKitPrebuilt.create(kitToken)
-    console.log("Zego instance", zp)
-    zp.joinRoom({
-      container: element,
+      const appID = 1490776922
+      const serverSecret = "d2010aee19628bade1b7b3523cbd11a9"
 
-      scenario: {
-        mode: ZegoUIKitPrebuilt.OneONoneCall,
-      },
-    })
-  }
+      // Corrected Date.now().toString() to generate the token correctly
+      const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
+        appID,
+        serverSecret,
+        roomId,
+        Date.now().toString(),
+        "Niladri"
+      )
 
-  return <div ref={myMeeting} roomid={roomid}></div>
+      console.log("Kit Token:", kitToken)
+
+      const zegoInstance = ZegoUIKitPrebuilt.create(kitToken)
+
+      console.log("Zego instance:", zegoInstance)
+
+      zegoInstance.joinRoom({
+        container: meetingContainerRef.current,
+        scenario: {
+          mode: ZegoUIKitPrebuilt.OneONoneCall,
+        },
+      })
+    }
+
+    initVideoCall()
+  }, [roomId])
+
+  return (
+    <div
+      ref={meetingContainerRef}
+      style={{ width: "100vw", height: "100vh" }}
+    ></div>
+  )
 }
 
 export default Room

@@ -67,7 +67,7 @@ function App() {
         <Route path="courses/:courseId" element={<CourseDetails />} />
         <Route path="/doctordetails/:doctorid" element={<DoctorDetails />} />
         <Route path="catalog/:catalogName" element={<Catalog />} />
-        <Route path="/room/:roomId" element={<Room />} />
+        <Route path="/room" element={<Room />} />
         {/* Open Route - for Only Non Logged in User */}
         <Route
           path="login"
@@ -136,7 +136,7 @@ function App() {
               />
               <Route
                 path="dashboard/appointments-doc"
-                element={<ApointmentDoc />}
+                element={<Appointments />}
               />
               {/* <Route
                 path="dashboard/edit-course/:courseId"

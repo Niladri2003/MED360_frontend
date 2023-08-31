@@ -13,7 +13,7 @@ const Final_Checkout = ({ doctorDetails, doctorUsrId }) => {
   console.log("user", user)
 
   const handlepayment = async () => {
-    console.log()
+    console.log(doctorid)
     if (user.accountType === "Patient") {
       // payment api call
       const {
