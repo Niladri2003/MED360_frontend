@@ -39,7 +39,10 @@ const DoctorDetails = () => {
       {isLoading ? (
         <p>Loading doctor details...</p>
       ) : (
-        <Final_Checkout doctorDetails={doctorDetails} />
+        <Final_Checkout
+          doctorDetails={doctorDetails}
+          doctorUsrId={doctorDetails.Doctor._id}
+        />
       )}
     </div>
   )

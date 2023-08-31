@@ -70,26 +70,6 @@ export default function DoctorInformationForm() {
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-8 rounded-md border-[1px] border-white  p-6"
     >
-      <label className="text-sm text-richblack-5" htmlFor="imageUpload">
-        Upload Your Image <sup className="text-pink-200">*</sup>
-      </label>
-      <input
-        type="file"
-        accept="image/png, image/gif, image/jpeg"
-        id="imageUpload"
-        onChange={(e) => {
-          const file = e.target.files[0]
-          setSelectedImage(file)
-          setImagePreview(URL.createObjectURL(file)) // Create a preview URL
-        }}
-        className="form-style w-full border-b-4 "
-        style={{ backgroundColor: "#b4e7ed", color: "black" }}
-      />
-      {/* Image preview */}
-      {imagePreview && (
-        <img src={imagePreview} alt="Preview" className="mt-2 max-h-36" />
-      )}
-
       {/* Display Name */}
       <div className="flex flex-col space-y-2">
         <label className="text-sm text-richblack-5" htmlFor="publicname">

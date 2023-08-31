@@ -1,5 +1,4 @@
-const BASE_URL =
-  "https://studynotin-backend-dot-hospital-backend-396618.el.r.appspot.com/api/v1"
+const BASE_URL = "http://localhost:4000/api/v1"
 
 // AUTH ENDPOINTS
 export const endpoints = {
@@ -18,9 +17,9 @@ export const profileEndpoints = {
 }
 
 // STUDENTS ENDPOINTS
-export const studentEndpoints = {
-  COURSE_PAYMENT_API: BASE_URL + "/payment/capturePayment",
-  COURSE_VERIFY_API: BASE_URL + "/payment/verifyPayment",
+export const patientPaymentEndpoints = {
+  APT_PAYMENT_API: BASE_URL + "/payment/capturePayment",
+  APT_VERIFY_API: BASE_URL + "/payment/verifyPayment",
   SEND_PAYMENT_SUCCESS_EMAIL_API: BASE_URL + "/payment/sendPaymentSuccessEmail",
 }
 

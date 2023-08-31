@@ -1,8 +1,92 @@
 import React from "react"
+import { toast } from "react-hot-toast"
+import { useSelector } from "react-redux"
 
 import profile from "../../../../assets/Images/Instructor.png"
+import { apiConnector } from "../../../../services/apiConnector"
+import { patientPaymentEndpoints } from "../../../../services/apis"
 
-const Final_Checkout = ({ doctorDetails }) => {
+const Final_Checkout = ({ doctorDetails, doctorUsrId }) => {
+  const { token } = useSelector((state) => state.auth)
+  const { user } = useSelector((state) => state.profile)
+  const doctorid = doctorDetails._id
+  console.log("user", user)
+
+  const handlepayment = async () => {
+    console.log()
+    if (user.accountType === "Patient") {
+      // payment api call
+      const {
+        data: { data },
+      } = await apiConnector(
+        "POST",
+        patientPaymentEndpoints.APT_PAYMENT_API,
+        {
+          doctorid,
+        },
+        {
+          Authorization: `Bearer ${token}`,
+        }
+      )
+
+      console.log("Data", data)
+      const options = {
+        key: "rzp_test_ApBTUeBOWrQlC4",
+        amount: data.amount,
+        currency: "INR",
+        name: user.firstName,
+        description: "Appointment on MED360",
+        image: user.image,
+        order_id: data.id,
+        handler: function (response) {
+          sendPaymentSuccessEmail(response, data.amount, token)
+          // verifyPayment({ ...response, doctorid }, token, navigate)
+          console.log(response)
+        },
+        prefill: {
+          name: user.firstName,
+          email: user.email,
+          contact: user.additionalDetails.contactNumber,
+        },
+        notes: {
+          address: "Razorpay Corporate Office",
+        },
+        theme: {
+          color: "#121212",
+        },
+      }
+      const razor = new window.Razorpay(options)
+      razor.open()
+      console.log(data)
+    } else {
+    }
+  }
+  async function sendPaymentSuccessEmail(response, amount, token) {
+    try {
+      console.log("Raxorpya response", response)
+      await apiConnector(
+        "POST",
+        patientPaymentEndpoints.SEND_PAYMENT_SUCCESS_EMAIL_API,
+        {
+          response,
+          amount,
+          userId: user._id,
+          doctorId: doctorUsrId,
+        },
+        {
+          Authorization: `Bearer ${token}`,
+        }
+      )
+    } catch (e) {
+      console.log("PAYMENT SUCCESS EMAIL ERROR............", e)
+    }
+  }
+
+  const showToast = () => {
+    // Implement your toast notification logic here
+    // This could be using a library like react-toastify or a custom solution
+  }
+
   return (
     <div>
       <div class="container mx-auto my-1 p-5">
@@ -11,7 +95,7 @@ const Final_Checkout = ({ doctorDetails }) => {
             <div class="border-green-400 border-t-4 bg-white p-3">
               <div class="image overflow-hidden ">
                 <img
-                  className="mx-auto h-[200px] w-[200px] rounded-full"
+                  className="mx-auto h-[200px] w-[200px] rounded-full border-[2px]"
                   src={`${doctorDetails.Doctor.image}`}
                   alt=""
                 />
@@ -131,12 +215,15 @@ const Final_Checkout = ({ doctorDetails }) => {
               </div>
               <button
                 type="button"
+                onClick={handlepayment}
                 class="mx-5 my-2 flex transform rounded-md bg-blue-600 px-10 py-3 text-white shadow-lg outline-none transition-transform focus:ring-4 active:scale-x-75  "
+                disabled={user.accountType === "Doctor" ? true : false}
               >
                 {/* <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg> */}
 
+                {/* Button payment */}
                 <span class="ml-2">
                   Request an Appointment ₹{`${doctorDetails.price}`}
                 </span>
@@ -144,67 +231,6 @@ const Final_Checkout = ({ doctorDetails }) => {
             </div>
 
             <div class="my-4"></div>
-
-            {/* <div class="bg-white p-3 shadow-sm rounded-sm">
-
-                            <div class="grid grid-cols-2">
-                                <div>
-                                    <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mb-3">
-                                        <span clas="text-green-500">
-                                            <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                            </svg>
-                                        </span>
-                                        <span class="tracking-wide">Experience</span>
-                                    </div>
-                                    <ul class="list-inside space-y-2">
-                                        <li>
-                                            <div class="text-teal-600">Owner at Her Company Inc.</div>
-                                            <div class="text-gray-500 text-xs">March 2020 - Now</div>
-                                        </li>
-                                        <li>
-                                            <div class="text-teal-600">Owner at Her Company Inc.</div>
-                                            <div class="text-gray-500 text-xs">March 2020 - Now</div>
-                                        </li>
-                                        <li>
-                                            <div class="text-teal-600">Owner at Her Company Inc.</div>
-                                            <div class="text-gray-500 text-xs">March 2020 - Now</div>
-                                        </li>
-                                        <li>
-                                            <div class="text-teal-600">Owner at Her Company Inc.</div>
-                                            <div class="text-gray-500 text-xs">March 2020 - Now</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mb-3">
-                                        <span clas="text-green-500">
-                                            <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke="currentColor">
-                                                <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z" />
-                                                <path fill="#fff"
-                                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                                            </svg>
-                                        </span>
-                                        <span class="tracking-wide">Education</span>
-                                    </div>
-                                    <ul class="list-inside space-y-2">
-                                        <li>
-                                            <div class="text-teal-600">Masters Degree in Oxford</div>
-                                            <div class="text-gray-500 text-xs">March 2020 - Now</div>
-                                        </li>
-                                        <li>
-                                            <div class="text-teal-600">Bachelors Degreen in LPU</div>
-                                            <div class="text-gray-500 text-xs">March 2020 - Now</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> */}
           </div>
         </div>
       </div>

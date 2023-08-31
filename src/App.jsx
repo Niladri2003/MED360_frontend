@@ -35,6 +35,7 @@ import ForgotPassword from "./pages/ForgotPassword"
 // Pages
 import Home from "./pages/Home"
 import Login from "./pages/Login"
+import Room from "./pages/Room"
 import Signup from "./pages/Signup"
 import UpdatePassword from "./pages/UpdatePassword"
 import VerifyEmail from "./pages/VerifyEmail"
@@ -66,6 +67,7 @@ function App() {
         <Route path="courses/:courseId" element={<CourseDetails />} />
         <Route path="/doctordetails/:doctorid" element={<DoctorDetails />} />
         <Route path="catalog/:catalogName" element={<Catalog />} />
+        <Route path="/room/:roomId" element={<Room />} />
         {/* Open Route - for Only Non Logged in User */}
         <Route
           path="login"
@@ -119,6 +121,7 @@ function App() {
           <Route path="dashboard/my-profile" element={<MyProfile />} />
           <Route path="dashboard/Settings" element={<Settings />} />
           <Route path="dashboard/blog-edit" element={<BlogPageEdit />} />
+
           {/* Route only for Doctors */}
           {user?.accountType === ACCOUNT_TYPE.DOCTOR && (
             <>
