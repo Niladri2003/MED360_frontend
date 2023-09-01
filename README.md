@@ -43,6 +43,16 @@ We deployed the app using Docker on Google Cloud Run. Visit the [Website](https:
   - <img src="https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png" width="35"> Google Cloud
   - <img src="https://nodemailer.com/nm_logo_200x136.png" width="25"> Node Mailer
   - <img src="https://res.cloudinary.com/postman/image/upload/t_team_logo/v1629869194/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8" width="16"> Postman
+ 
+    ## For Best use of Google Cloud Track
+    - **Backend Is running on App Engine:**
+    ![image](https://github.com/Niladri2003/Interhacktive_frontend/assets/93518661/d3657e1b-43ea-427d-a8b6-f295c2e6de1c)
+  - **Frontend Is running on Cloud Run:**
+  - ![image](https://github.com/Niladri2003/Interhacktive_frontend/assets/93518661/1b075f42-29d2-4af4-8b02-62bc69f678dd)
+    - **Url Of Cloud Deployments:**
+      - [Backend Url](https://med360-backend-dot-hospital-backend-396618.el.r.appspot.com/)
+      - [Frontend Url](https://med-n4ix5hnjea-el.a.run.app/)
+
 
 ## Installation and Setup
 1. Clone the repository: `git clone https://github.com/Niladri2003/Interhacktive_frontend-`
