@@ -5,7 +5,7 @@ import { MdNavigateNext } from "react-icons/md"
 import { useDispatch, useSelector } from "react-redux"
 
 import {
-
+  addDoctorPublishments,
   fetchDocCategories,
 } from "../../../../../services/operations/doctorDetailsAPI"
 import IconBtn from "../../../../Common/IconBtn"
@@ -41,11 +41,8 @@ export default function DoctorInformationForm() {
 
   //   handle next button click
   const onSubmit = async (data) => {
-    console.log(selectedImage)
-    console.log("HEllo")
-
-
     const formData = new FormData()
+    setLoading(true)
     formData.append("thumbnail", selectedImage)
     formData.append("Docpublicname", data.publicname)
     formData.append("DocDescription", data.DoctorDesc)
@@ -55,8 +52,9 @@ export default function DoctorInformationForm() {
     formData.append("ClinicAddress", data.Address)
     formData.append("Education", data.Education)
     formData.append("Language", data.Language)
-    setLoading(true)
+    console.log(formData)
 
+const result=await  addDoctorPublishments(formData,token);
 
     setLoading(false)
   }
