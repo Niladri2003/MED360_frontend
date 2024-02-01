@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:4000/api/v1"
+const BASE_URL = "https://med360backend.niladriadak.tech/api/v1"
 
 // AUTH ENDPOINTS
 export const endpoints = {
@@ -25,12 +25,12 @@ export const patientPaymentEndpoints = {
 
 // COURSE ENDPOINTS
 export const courseEndpoints = {
-  GET_ALL_DOCTORS_API: BASE_URL + "/course/getAllCourses",
-  COURSE_DETAILS_API: BASE_URL + "/course/getCourseDetails",
-  GET_DOC_FULL_DETAILS: BASE_URL + "/course/getDocDetails",
-  COURSE_CATEGORIES_API: BASE_URL + "/course/showAllCategories",
-  CREATE_COURSE_API: BASE_URL + "/course/createCourse",
-  GET_ALL_APOINTMENTS: BASE_URL + "/course/getUserAppointments",
+  GET_ALL_DOCTORS_API: BASE_URL + "/doctor/getAllDoctors",
+  COURSE_DETAILS_API: BASE_URL + "/doctor/getCourseDetails",
+  GET_DOC_FULL_DETAILS: BASE_URL + "/doctor/getDocDetails",
+  COURSE_CATEGORIES_API: BASE_URL + "/doctor/showAllCategories",
+  CREATE_COURSE_API: BASE_URL + "/doctor/createCourse",
+  GET_ALL_APOINTMENTS: BASE_URL + "/doctor/getUserAppointments",
 }
 
 // RATINGS AND REVIEWS
@@ -40,7 +40,7 @@ export const ratingsEndpoints = {
 
 // CATAGORIES API
 export const categories = {
-  CATEGORIES_API: BASE_URL + "/course/showAllCategories",
+  CATEGORIES_API: BASE_URL + "/doctor/showAllCategories",
 }
 
 // CATALOG PAGE DATA

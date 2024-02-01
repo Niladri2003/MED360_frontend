@@ -101,7 +101,7 @@ export const fetchInstructorCourses = async (token) => {
   toast.dismiss(toastId)
   return result
 }
-export const addCourseDetails = async (data, token) => {
+export const addDoctorPublishments = async (data, token) => {
   let result = null
   const toastId = toast.loading("Loading...")
   try {
@@ -109,14 +109,14 @@ export const addCourseDetails = async (data, token) => {
       "Content-Type": "multipart/form-data",
       Authorization: `Bearer ${token}`,
     })
-    console.log("CREATE COURSE API RESPONSE............", response)
+    console.log("CREATE Doctor Publishment API RESPONSE............", response)
     if (!response?.data?.success) {
-      throw new Error("Could Not Add Course Details")
+      throw new Error("Could Not Doctor Details")
     }
     toast.success("Doctors Details Added Successfully")
     result = response?.data?.data
   } catch (error) {
-    console.log("CREATE COURSE API ERROR............", error)
+    console.log("CREATE doctor publishment API ERROR............", error)
     toast.error(error.message)
   }
   toast.dismiss(toastId)

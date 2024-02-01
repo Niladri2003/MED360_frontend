@@ -98,7 +98,7 @@ function Navbar() {
                               ))}
                           </>
                         ) : (
-                          <p className="text-center">No Doctors Found</p>
+                          <p className="text-center">No Doctors Categories found</p>
                         )}
                       </div>
                     </div>
