@@ -10,8 +10,8 @@ const Room = () => {
     const initVideoCall = async () => {
       console.log("Room ID:", roomId)
 
-      const appID = 1490776922
-      const serverSecret = "d2010aee19628bade1b7b3523cbd11a9"
+      const appID = 856053567
+      const serverSecret = "05decd1e23f2c98c4374f69fda2d22df"
 
       // Corrected Date.now().toString() to generate the token correctly
       const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(

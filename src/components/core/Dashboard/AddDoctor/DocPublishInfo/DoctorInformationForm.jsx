@@ -1,18 +1,14 @@
 import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
-import { toast } from "react-hot-toast"
 import { HiOutlineCurrencyRupee } from "react-icons/hi"
 import { MdNavigateNext } from "react-icons/md"
 import { useDispatch, useSelector } from "react-redux"
 
 import {
-  addCourseDetails,
-  editCourseDetails,
+  addDoctorPublishments,
   fetchDocCategories,
 } from "../../../../../services/operations/doctorDetailsAPI"
-import { setCourse, setStep } from "../../../../../slices/courseSlice"
 import IconBtn from "../../../../Common/IconBtn"
-import Upload from "../Upload"
 
 export default function DoctorInformationForm() {
   const {
@@ -25,7 +21,6 @@ export default function DoctorInformationForm() {
 
   const dispatch = useDispatch()
   const { token } = useSelector((state) => state.auth)
-  const { course, editCourse } = useSelector((state) => state.course)
   const [loading, setLoading] = useState(false)
   const [courseCategories, setCourseCategories] = useState([])
   const [selectedImage, setSelectedImage] = useState(null)
@@ -46,10 +41,8 @@ export default function DoctorInformationForm() {
 
   //   handle next button click
   const onSubmit = async (data) => {
-    console.log(selectedImage)
-    console.log("HEllo")
-
     const formData = new FormData()
+    setLoading(true)
     formData.append("thumbnail", selectedImage)
     formData.append("Docpublicname", data.publicname)
     formData.append("DocDescription", data.DoctorDesc)
@@ -59,8 +52,9 @@ export default function DoctorInformationForm() {
     formData.append("ClinicAddress", data.Address)
     formData.append("Education", data.Education)
     formData.append("Language", data.Language)
-    setLoading(true)
-    const result = await addCourseDetails(formData, token)
+    console.log(formData)
+
+const result=await  addDoctorPublishments(formData,token);
 
     setLoading(false)
   }
