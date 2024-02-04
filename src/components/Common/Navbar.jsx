@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai"
+import { MdClose } from "react-icons/md";
 import { BsChevronDown } from "react-icons/bs"
 import { useSelector } from "react-redux"
 import { Link, matchPath, useLocation } from "react-router-dom"
@@ -10,6 +11,7 @@ import { apiConnector } from "../../services/apiConnector"
 import { categories } from "../../services/apis"
 import { ACCOUNT_TYPE } from "../../utils/constants"
 import ProfileDropdown from "../core/Auth/ProfileDropdown"
+import button from "../core/HomePage/Button"
 
 function Navbar() {
   const { token } = useSelector((state) => state.auth)
@@ -19,13 +21,17 @@ function Navbar() {
 
   const [subLinks, setSubLinks] = useState([])
   const [loading, setLoading] = useState(false)
+  const [HamIconStatus,setHamIconStatus]=useState(true);
+
+  const [subLinksVisible, setSubLinksVisible] = useState(false);
 
   useEffect(() => {
     ;(async () => {
       setLoading(true)
       try {
         const res = await apiConnector("GET", categories.CATEGORIES_API)
-        setSubLinks(res.data.data)
+        setSubLinks(res.data.data);
+
       } catch (error) {
         console.log("Could not fetch Categories.", error)
       }
@@ -33,7 +39,6 @@ function Navbar() {
     })()
   }, [])
 
-  // console.log("sub links", subLinks)
 
   const matchRoute = (route) => {
     return matchPath({ path: route }, location.pathname)
@@ -74,26 +79,26 @@ function Navbar() {
                     >
                       <p>{link.title}</p>
                       <BsChevronDown />
-                      <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
-                        <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
+                      <div
+                        className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
+                        <div
+                          className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
                         {loading ? (
                           <p className="text-center">Loading...</p>
                         ) : subLinks.length ? (
                           <>
                             {subLinks
-                              ?.filter(
-                                (subLink) => subLink?.courses?.length > 0
-                              )
-                              ?.map((subLink, i) => (
+                              ?.map((subLink, index) => (
+
                                 <Link
                                   to={`/catalog/${subLink.name
                                     .split(" ")
                                     .join("-")
                                     .toLowerCase()}`}
                                   className="rounded-lg bg-transparent py-4 pl-4 hover:bg-richblack-50"
-                                  key={i}
+                                  key={index}
                                 >
-                                  <p>{subLink.name}</p>
+                                  <p className={"text-black"}>{subLink.name}</p>
                                 </Link>
                               ))}
                           </>
@@ -103,6 +108,7 @@ function Navbar() {
                       </div>
                     </div>
                   </>
+                  // After Catalog other Navbar Links are Here
                 ) : (
                   <Link to={link?.path}>
                     <p
@@ -146,8 +152,95 @@ function Navbar() {
           )}
           {token !== null && <ProfileDropdown />}
         </div>
-        <button className="mr-4 md:hidden">
-          <AiOutlineMenu fontSize={24} fill="#090a0a" />
+
+
+        <button
+          className="mr-4 md:hidden"
+          onClick={() => setHamIconStatus(!HamIconStatus)}
+        >
+          {HamIconStatus ? (
+            <AiOutlineMenu fontSize={24} fill="#090a0a" />
+          ) :(
+            <MdClose fontSize={27} fill="#090a0a" />
+          )}
+          {HamIconStatus ? null : (
+            <div className="fixed top-16 right-0 h-[75%] w-[50%] bg-white z-50 p-2 rounded-md">
+              {/* Mobile Menu Content */}
+              <div className="flex flex-col items-start">
+                {/* Navigation links */}
+                <ul className="flex flex-col gap-y-4 items-start w-full">
+                  {NavbarLinks.map((link, index) => (
+                    <li key={index}>
+                      {link.title === 'Catalog' ? (
+
+
+                        <div
+                          className={` flex flex-col items-center justify-center${
+                            subLinksVisible ? 'text-blue-100' : 'text-black'
+                          }`}
+                        >
+                          <div className={"flex flex-row gap-2 items-center top-2"}>
+                          <p onClick={(e) => { e.stopPropagation(); setSubLinksVisible(!subLinksVisible); }}>
+                            {link.title}
+                          </p>
+                          <BsChevronDown />
+                          </div>
+
+                          <div
+                            className={`${
+                              subLinksVisible
+                                ? 'visible  opacity-100'
+                                : 'invisible opacity-0'
+                            }  top-full  flex  flex-col  text-richblack-900 transition-all duration-150`}
+                          >
+                            {subLinks.map((subLink, index) => (
+                              <Link
+                                to={subLink.path}
+                                className="rounded-lg bg-transparent hover:bg-richblack-50"
+                                key={index}
+                              >
+                                <p className={'text-black'}>{subLink.name}</p>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <Link to={link?.path} onClick={() => setSubLinksVisible(false)}>
+                          <p className={`${
+                            link.title === 'Catalog' && subLinksVisible
+                              ? 'text-blue-100'
+                              : 'text-black'
+                          }`}>
+                            {link.title}
+                          </p>
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Login / Signup / Dashboard */}
+                <div className="flex flex-col gap-y-4 mt-4 items-start">
+                  {token === null && (
+                    <Link to="/login">
+                      <button className="rounded-[8px] border border-richblack-700 px-[12px] py-[8px] text-black">
+                        Log in
+                      </button>
+                    </Link>
+                  )}
+                  {token === null && (
+                    <Link to="/signup">
+                      <button className="rounded-[8px] border border-richblack-700 px-[12px] py-[8px] text-black">
+                        Sign up
+                      </button>
+                    </Link>
+                  )}
+                  {token !== null && <ProfileDropdown />}
+                </div>
+              </div>
+
+            </div>
+          )}
         </button>
       </div>
     </div>

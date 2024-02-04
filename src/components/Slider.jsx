@@ -19,9 +19,9 @@ import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 import { Link } from "react-router-dom"
 
-import Img1 from "../assets/Images/slide_4.jpg"
-import Img2 from "../assets/Images/slider_2.jpg"
-import Img3 from "../assets/Images/slider_3.jpg"
+import Img1 from "../assets/Images/SliderImages/slide_4 .webp"
+import Img2 from "../assets/Images/SliderImages/slider_2.webp"
+import Img3 from "../assets/Images/SliderImages/slider_3.webp"
 import IconBtn from "./Common/IconBtn"
 
 const Slider = () => {
@@ -35,10 +35,10 @@ const Slider = () => {
       //   loop={true}
       navigation
       freeMode={true}
-      //   autoplay={{
-      //     delay: 2500,
-      //     disableOnInteraction: false,
-      //   }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
       modules={[FreeMode, Pagination, Autoplay, Navigation]}
       prevButton={<div className="swiper-button-prev"></div>}
       nextButton={<div className="swiper-button-next"></div>}
@@ -46,10 +46,10 @@ const Slider = () => {
     >
       <SwiperSlide>
         <div className="relative">
-          <img src={Img1} className="-z-10 h-[700px] w-full object-cover" />
+          <img src={Img1} fetchpriority={"high"} className="-z-10 h-[700px] w-full object-cover" alt={"Slider Image"} loading={"lazy"}/>
           <div className="absolute left-[80%] top-1/2 -translate-x-1/2 -translate-y-1/2 transform gap-x-1 pb-2  font-bold text-white">
             <p className="pb-2 text-4xl">
-              {" "}
+
               Your Journey to Better Health Starts Here
             </p>
             <Link to={"/signup"}>
@@ -61,10 +61,10 @@ const Slider = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={Img2} className="h-[700px] w-full object-cover" />
+        <img src={Img2} className="h-[700px] w-full object-cover" alt={"Slider Image"} loading={"lazy"}/>
         <div className="absolute left-[80%] top-1/2 -translate-x-1/2 -translate-y-1/2 transform gap-x-1 pb-2  font-bold text-white">
             <p className="pb-2 text-4xl">
-              {" "}
+
               Most trusted health services
             </p>
             <Link to={"/signup"}>
@@ -76,7 +76,7 @@ const Slider = () => {
       </SwiperSlide>
       <SwiperSlide>
         <div className="relative">
-          <img src={Img3} className="h-[700px] w-screen object-cover" />
+          <img src={Img3} className="h-[700px] w-screen object-cover" alt={"Slider Image"} loading={"lazy"}/>
           <div className="absolute left-[25%] top-1/2 -translate-x-1/2 -translate-y-1/2 transform ml-10  pb-2 font-bold text-white">
             <p className="pb-2 text-4xl"> Accessible Healthcare Anywhere</p>
             <div className="mb-2 mt-2 flex flex-row items-center gap-2">

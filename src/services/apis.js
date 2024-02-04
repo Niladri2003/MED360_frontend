@@ -1,4 +1,14 @@
-const BASE_URL = "https://med360backend.niladriadak.tech/api/v1"
+let BASE_URL;
+
+
+if (process.env.NODE_ENV === 'production') {
+  BASE_URL = "https://med360backend.niladriadak.tech/api/v1";
+} else if  (process.env.NODE_ENV === 'development') {
+  BASE_URL = "http://localhost:4000/api/v1"
+}
+
+//http://localhost:4000/api/v1
+//https://med360backend.niladriadak.tech/api/v1
 
 // AUTH ENDPOINTS
 export const endpoints = {
