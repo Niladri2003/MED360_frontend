@@ -172,30 +172,36 @@ function Navbar() {
                   {NavbarLinks.map((link, index) => (
                     <li key={index}>
                       {link.title === 'Catalog' ? (
-
-
                         <div
-                          className={` flex flex-col items-center justify-center${
+                          className={`relative ${
                             subLinksVisible ? 'text-blue-100' : 'text-black'
                           }`}
                         >
-                          <div className={"flex flex-row gap-2 items-center top-2"}>
-                          <p onClick={(e) => { e.stopPropagation(); setSubLinksVisible(!subLinksVisible); }}>
-                            {link.title}
-                          </p>
-                          <BsChevronDown />
+                          <div className="flex flex-row gap-2 items-center">
+                            <p
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSubLinksVisible(!subLinksVisible);
+                              }}
+                            >
+                              {link.title}
+                            </p>
+                            <BsChevronDown />
                           </div>
 
                           <div
                             className={`${
                               subLinksVisible
-                                ? 'visible  opacity-100'
+                                ? 'visible opacity-100'
                                 : 'invisible opacity-0'
-                            }  top-full  flex  flex-col  text-richblack-900 transition-all duration-150`}
+                            } absolute top-full left-0 flex flex-col z-40 text-richblack-900 bg-white transition-all duration-150`}
                           >
                             {subLinks.map((subLink, index) => (
                               <Link
-                                to={subLink.path}
+                                to={`/catalog/${subLink.name
+                                  .split(" ")
+                                  .join("-")
+                                  .toLowerCase()}`}
                                 className="rounded-lg bg-transparent hover:bg-richblack-50"
                                 key={index}
                               >
@@ -206,11 +212,13 @@ function Navbar() {
                         </div>
                       ) : (
                         <Link to={link?.path} onClick={() => setSubLinksVisible(false)}>
-                          <p className={`${
-                            link.title === 'Catalog' && subLinksVisible
-                              ? 'text-blue-100'
-                              : 'text-black'
-                          }`}>
+                          <p
+                            className={`${
+                              link.title === 'Catalog' && subLinksVisible
+                                ? 'text-blue-100'
+                                : 'text-black'
+                            }`}
+                          >
                             {link.title}
                           </p>
                         </Link>

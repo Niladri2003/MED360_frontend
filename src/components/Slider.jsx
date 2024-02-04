@@ -19,7 +19,7 @@ import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 import { Link } from "react-router-dom"
 
-import Img1 from "../assets/Images/SliderImages/slide_4 .webp"
+import Img1 from "../assets/Images/SliderImages/slide_4.webp"
 import Img2 from "../assets/Images/SliderImages/slider_2.webp"
 import Img3 from "../assets/Images/SliderImages/slider_3.webp"
 import IconBtn from "./Common/IconBtn"
