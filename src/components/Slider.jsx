@@ -19,10 +19,12 @@ import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 import { Link } from "react-router-dom"
 
-import Img1 from "../assets/Images/SliderImages/slide_4.webp"
-import Img2 from "../assets/Images/SliderImages/slider_2.webp"
-import Img3 from "../assets/Images/SliderImages/slider_3.webp"
-import IconBtn from "./Common/IconBtn"
+//import Img1 from "../assets/Images/SliderImages/slide_4.webp"
+//import Img2 from "../assets/Images/SliderImages/slider_2.webp"
+//import Img3 from "../assets/Images/SliderImages/slider_3.webp"
+const Img1="https://res.cloudinary.com/dvbnkndyc/image/upload/v1707072257/tvirf48l1umd8drjc2ub.webp";
+const Img3="https://res.cloudinary.com/dvbnkndyc/image/upload/v1707072257/oxdlrenoef3mrtdm3kit.webp";
+const Img2="https://res.cloudinary.com/dvbnkndyc/image/upload/v1707072257/y4jnqkb3n0ihkjxnczlb.webp";
 
 const Slider = () => {
   return (
