@@ -34,8 +34,8 @@ export function sendOtp(email, navigate) {
       toast.success("OTP Sent Successfully")
       navigate("/verify-email")
     } catch (error) {
-      console.log("SENDOTP API ERROR............", error)
-      toast.error("Could Not Send OTP")
+      console.log("SEND OTP API ERROR............", error.response.data)
+      toast.error(error.response.data.message)
     }
     dispatch(setLoading(false))
     toast.dismiss(toastId)
@@ -100,12 +100,13 @@ export function login(email, password, navigate) {
       }
 
       toast.success("Login Successful")
-      dispatch(setToken(response.data.token))
+      dispatch(setToken(response.data.user.token))
       const userImage = response.data?.user?.image
         ? response.data.user.image
         : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName} ${response.data.user.lastName}`
       dispatch(setUser({ ...response.data.user, image: userImage }))
-      localStorage.setItem("token", JSON.stringify(response.data.token))
+      //console.log(response.data.user.token)
+      localStorage.setItem("token", JSON.stringify(response.data.user.token))
       navigate("/dashboard/my-profile")
     } catch (error) {
       console.log("LOGIN API ERROR............", error)
