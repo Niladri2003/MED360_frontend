@@ -1,11 +1,9 @@
 {
   "name": "med360-frontend",
-  "description": "This is the client side of the StudyNotion App",
+  "description": "This is the client side of the Med360 App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@mui/material": "^5.14.6",
-    "@mui/styled-engine-sc": "^5.14.6",
     "@ramonak/react-progress-bar": "^5.0.3",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -65,6 +63,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
     "concurrently": "^8.0.1",
     "prettier": "^2.8.8",
