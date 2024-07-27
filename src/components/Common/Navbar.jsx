@@ -46,9 +46,7 @@ function Navbar() {
 
   return (
     <div
-      className={`flex h-16 items-center justify-center border-b-[1px] border-b-richblack-700 ${
-        location.pathname !== "/" ? "bg-[#46b9ea]" : "bg-[#46b9ea]"
-      } transition-all duration-200`}
+      className={`flex h-16 items-center justify-center border-b-[1px] border-b-richblack-700 bg-white transition-all duration-200`}
     >
       <div className="flex w-11/12 max-w-maxContent items-center justify-between">
         {/* Logo */}
@@ -73,7 +71,7 @@ function Navbar() {
                     <div
                       className={`group relative flex cursor-pointer items-center gap-1 ${
                         matchRoute("/catalog/:catalogName")
-                          ? "text-white"
+                          ? "text-black"
                           : "text-black"
                       }`}
                     >
@@ -113,7 +111,7 @@ function Navbar() {
                   <Link to={link?.path}>
                     <p
                       className={`${
-                        matchRoute(link?.path) ? "text-white" : "text-black"
+                        matchRoute(link?.path) ? "text-black font-bold" : "text-black"
                       }`}
                     >
                       {link.title}
