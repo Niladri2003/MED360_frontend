@@ -1,0 +1,20 @@
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px; /* Change arrow font size */
+  color: #fefcfc; /* Change arrow color */
+}
+
+/* On hover styles for navigation arrows */
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  color: #ffffff; /* Change arrow color on hover */
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  top:140px
+}
+.swiper-pagination-bullet-active{
+  background: #e3e3eb
+}
+
+

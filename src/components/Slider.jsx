@@ -32,8 +32,7 @@ const Slider = () => {
       // install Swiper modules
       slidesPerView={1}
       spaceBetween={25}
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+
       //   loop={true}
       navigation
       freeMode={true}
@@ -41,7 +40,7 @@ const Slider = () => {
         //   delay: 2500,
         //   disableOnInteraction: false,
         // }}
-      modules={[FreeMode, Pagination, Autoplay, Navigation]}
+      modules={[FreeMode, Autoplay, Navigation]}
       prevButton={<div className="swiper-button-prev"></div>}
       nextButton={<div className="swiper-button-next"></div>}
       className="w-full "
@@ -96,6 +95,7 @@ const Slider = () => {
           </div>
         </div>
       </SwiperSlide>
+
     </Swiper>
   )
 }
