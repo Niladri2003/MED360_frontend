@@ -25,6 +25,7 @@ import HealtRecords from "./components/core/Dashboard/PatientDashboard/HealtReco
 import Settings from "./components/core/Dashboard/Settings"
 import About from "./pages/About"
 import Catalog from "./pages/Catalog"
+import CatalogPage  from "./pages/CatalogPage";
 import Contact from "./pages/Contact"
 import CourseDetails from "./pages/CourseDetails"
 import Dashboard from "./pages/Dashboard"
@@ -66,7 +67,8 @@ function App() {
         <Route path="/doctors" element={<Doctors />} />
         <Route path="courses/:courseId" element={<CourseDetails />} />
         <Route path="/doctordetails/:doctorid" element={<DoctorDetails />} />
-        <Route path="catalog/:catalogName" element={<Catalog />} />
+        <Route path="catalog/:catalogName" element={<Catalog/>} />
+        <Route path="/consult" element={<CatalogPage/>}/>
         <Route path="/room" element={<Room />} />
         {/* Open Route - for Only Non Logged in User */}
         <Route

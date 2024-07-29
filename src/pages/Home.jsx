@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react"
+import React, {useEffect} from "react"
 import { useDispatch } from "react-redux"
 import VideoConsultImg from "../assets/homepage/HomeCard/dweb_instant_video_consulation.png"
 import FindDocsNear from "../assets/homepage/HomeCard/dweb_find_doctors.png"
@@ -22,20 +22,14 @@ import Article1 from "../assets/homepage/articles/5fd27b74d9477cb633445cf3f10507
 import Article2 from "../assets/homepage/articles/bade52edc7fb158bf627216bf96c2b881a97f30c.jpeg"
 
 
-import hero_img2 from "../assets/Images/hero_gif2.gif"
-import hero_img from "../assets/Images/hero_gif.gif"
+
 // Component Imports
 import Footer from "../components/Common/Footer"
-import HomeCardGroup from "../components/Common/HomeCardGroup"
 import Slider from "../components/Slider"
-import CTAButton from "../components/core/HomePage/Button"
-import CodeBlocks from "../components/core/HomePage/CodeBlocks"
-import HighlightText from "../components/core/HomePage/HighlightText"
-import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
 import { apiConnector } from "../services/apiConnector"
 import { courseEndpoints } from "../services/apis"
 import { setdoctorData } from "../slices/doctorsSlice"
-import {Pagination, Navigation, FreeMode, Autoplay} from 'swiper';
+import {Pagination, Navigation, Autoplay} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
@@ -45,9 +39,6 @@ import 'swiper/css/navigation';
 import '../components/core/HomePage/Swiper.css';
 
 function Home() {
-  const [swiperRef, setSwiperRef] = useState(null);
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
   const dispatch = useDispatch()
   useEffect(() => {
     const fetchDoctors = async () => {
@@ -280,9 +271,7 @@ function Home() {
           </div>
           <div className={"flex flex-row justify-between"}>
             <Swiper
-
               slidesPerView={4}
-
               spaceBetween={30}
               pagination={{ clickable: true }}
               navigation

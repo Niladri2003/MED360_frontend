@@ -17,4 +17,38 @@
   background: #e3e3eb
 }
 
-
+.swiper-button-prev1{
+  position: absolute;
+  top: 53%;
+  width: 32px;
+  height: 32px;
+  margin-top: -25px;
+  z-index: 10;
+  cursor: pointer;
+  background-color: white;;
+  border-radius: 32px;
+  border: 1px solid #F0F0F5;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.swiper-button-next1{
+  position: absolute;
+  top: 53%;
+  left: 97%;
+  width: 32px;
+  height: 32px;
+  margin-top: -25px;
+  z-index: 10;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 32px;
+  border: 1px solid #F0F0F5;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
