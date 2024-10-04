@@ -1,4 +1,4 @@
-const BASE_URL = "https://starfish-app-huept.ondigitalocean.app/api/v1"
+const BASE_URL = "http://localhost:4000/api/v1"
 //http://localhost:4000/docs/
 //https://med360backend.niladriadak.tech/api/v1
 //https://starfish-app-huept.ondigitalocean.app/
